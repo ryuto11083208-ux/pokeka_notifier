@@ -1,4 +1,4 @@
-name: Pokeka Lottery Notifier
+name: "Pokeka Lottery Notifier"
 
 on:
   schedule:
