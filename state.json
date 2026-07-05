@@ -1,5 +1,17 @@
 {
   "nyuka_now": {
+    "抽選・予約応募受付中のストア::晴れる屋2通販::ポケモンカード アビスアイ": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "晴れる屋2通販",
+      "data": {
+        "対象商品": "ポケモンカード アビスアイ",
+        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
+        "開始日": "7月5日(日)10:00",
+        "当選発表": "2026年7月7日（火）～ 2026年7月8日（水）当選メール送付予定",
+        "応募条件": "晴れる屋2通販サイトの会員登録",
+        "応募ページ": "晴れる屋2通販の応募ページ"
+      }
+    },
     "抽選・予約応募受付中のストア::Ganryu秋葉原店::ポケモンカード MEGAドリームex ポケモンカード インフェルノX ポケモンカード スターターセットMEGA メガゲンガーex": {
       "section": "抽選・予約応募受付中のストア",
       "store": "Ganryu秋葉原店",
@@ -255,6 +267,11 @@
     }
   },
   "pokecawatch": {
+    "https://pokecawatch.com/?p=18903": {
+      "title": "【ポケカ】ストームエメラルダ　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-storm-emerald?utm_source=rss&utm_medium=rss&utm_campaign=lottery-storm-emerald",
+      "published": "Fri, 19 Jun 2026 07:52:53 +0000"
+    },
     "https://pokecawatch.com/?p=18885": {
       "title": "【ポケカ】ポケモンカードゲーム MEGA 30th CELEBRATION FUTURISTIC BOX　抽選・予約情報",
       "link": "https://pokecawatch.com/lottery-30th-celebration-futuristicbox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-futuristicbox",
