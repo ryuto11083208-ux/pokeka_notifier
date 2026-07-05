@@ -316,15 +316,18 @@ def collect_deadline_reminders(nyuka_entries, gamepedia_entries, now, reminded):
 
 def send_discord_embeds(embeds):
     if not embeds:
-        return
+        return True
     if not DISCORD_WEBHOOK_URL:
         print("DISCORD_WEBHOOK_URL is not set; skipping notification", file=sys.stderr)
-        return
+        return False
+    ok = True
     for i in range(0, len(embeds), 10):
         chunk = embeds[i : i + 10]
         resp = requests.post(DISCORD_WEBHOOK_URL, json={"embeds": chunk}, timeout=30)
         if resp.status_code >= 300:
             print(f"Discord webhook failed: {resp.status_code} {resp.text}", file=sys.stderr)
+            ok = False
+    return ok
 
 
 def main():
@@ -379,17 +382,19 @@ def main():
             + reminder_embeds
         )
 
-    send_discord_embeds(embeds)
-    print(f"{len(embeds)}件の通知を送信しました。")
-
-    save_state(
-        {
-            "nyuka_now": nyuka_entries,
-            "pokecawatch": pokecawatch_entries,
-            "gamepedia": gamepedia_entries,
-            "reminders_sent": reminders_sent,
-        }
-    )
+    sent_ok = send_discord_embeds(embeds)
+    if sent_ok:
+        print(f"{len(embeds)}件の通知を送信しました。")
+        save_state(
+            {
+                "nyuka_now": nyuka_entries,
+                "pokecawatch": pokecawatch_entries,
+                "gamepedia": gamepedia_entries,
+                "reminders_sent": reminders_sent,
+            }
+        )
+    else:
+        print(f"{len(embeds)}件の通知の送信に失敗したため、状態を更新せず次回すべて再試行します。", file=sys.stderr)
 
 
 if __name__ == "__main__":
