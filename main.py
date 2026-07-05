@@ -1,11 +1,17 @@
 import hashlib
 import json
 import os
+import re
 import sys
+from datetime import datetime, timedelta, timezone
 
 import feedparser
 import requests
 from bs4 import BeautifulSoup
+
+JST = timezone(timedelta(hours=9))
+DEADLINE_PATTERN = re.compile(r"(\d{1,2})[月/](\d{1,2})日?(?:\([^)]*\))?\s*(\d{1,2}):(\d{2})")
+DEADLINE_FIELDS = ["抽選終了日時", "終了日", "受付終了日時"]
 
 NYUKA_NOW_URL = os.environ.get("NYUKA_NOW_URL", "https://nyuka-now.com/archives/2459")
 POKECAWATCH_FEED_URL = os.environ.get(
@@ -63,7 +69,11 @@ def fetch_nyuka_now_entries():
                 td = row.find("td")
                 if th is None or td is None:
                     continue
-                row_data[th.get_text(strip=True)] = td.get_text(" ", strip=True)
+                label = th.get_text(strip=True)
+                row_data[label] = td.get_text(" ", strip=True)
+                link = td.find("a", href=True)
+                if link is not None:
+                    row_data[f"{label}_url"] = link["href"]
 
             product = row_data.get("対象商品", "")
             key = f"{current_section}::{current_store}::{product}"
@@ -156,7 +166,7 @@ def load_state():
     if os.path.exists(STATE_FILE):
         with open(STATE_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {"nyuka_now": {}, "pokecawatch": {}, "gamepedia": {}}
+    return {"nyuka_now": {}, "pokecawatch": {}, "gamepedia": {}, "reminders_sent": {}}
 
 
 def save_state(state):
@@ -222,6 +232,88 @@ def build_gamepedia_embed(entry, is_update):
     return embed
 
 
+def parse_deadline(text, now):
+    if not text:
+        return None
+    m = DEADLINE_PATTERN.search(text)
+    if not m:
+        return None
+    month, day, hour, minute = (int(x) for x in m.groups())
+    try:
+        candidate = datetime(now.year, month, day, hour, minute, tzinfo=JST)
+    except ValueError:
+        return None
+    if candidate < now - timedelta(days=1):
+        candidate = candidate.replace(year=candidate.year + 1)
+    return candidate
+
+
+def extract_deadline(data, now):
+    for field in DEADLINE_FIELDS:
+        if field in data:
+            deadline = parse_deadline(data[field], now)
+            if deadline is not None:
+                return deadline
+    return None
+
+
+def entry_display_info(source, entry):
+    if source == "nyuka_now":
+        data = entry["data"]
+        name = f"{entry['store']}：{data.get('対象商品', '')}"
+        url = data.get("応募ページ_url") or data.get("詳細ページ_url")
+        label = "入荷Now"
+    else:
+        name = f"{entry['shop']}：{entry['product']}"
+        url = entry.get("detail_url")
+        label = "攻略大百科"
+    return name, label, url
+
+
+def build_reminder_embed(name, label, url, tag):
+    embed = {
+        "title": f"⏰ {tag}：{name}",
+        "description": f"{label} - 応募をお忘れなく",
+        "color": 0xE74C3C,
+    }
+    if url:
+        embed["url"] = url
+    return embed
+
+
+def collect_deadline_reminders(nyuka_entries, gamepedia_entries, now, reminded):
+    today = now.date()
+    tomorrow = today + timedelta(days=1)
+    updated_reminded = dict(reminded)
+    embeds = []
+
+    for source, entries in (("nyuka_now", nyuka_entries), ("gamepedia", gamepedia_entries)):
+        for key, entry in entries.items():
+            deadline = extract_deadline(entry["data"], now)
+            if deadline is None:
+                continue
+            deadline_date = deadline.date()
+            if deadline_date == today:
+                tag = "本日締切"
+            elif deadline_date == tomorrow:
+                tag = "明日締切"
+            else:
+                continue
+
+            reminder_key = f"{source}::{key}"
+            sent_tags = updated_reminded.get(reminder_key, [])
+            if tag in sent_tags:
+                continue
+
+            name, label, url = entry_display_info(source, entry)
+            embeds.append(build_reminder_embed(name, label, url, tag))
+            updated_reminded[reminder_key] = sent_tags + [tag]
+
+    valid_keys = {f"nyuka_now::{k}" for k in nyuka_entries} | {f"gamepedia::{k}" for k in gamepedia_entries}
+    cleaned_reminded = {k: v for k, v in updated_reminded.items() if k in valid_keys}
+    return embeds, cleaned_reminded
+
+
 def send_discord_embeds(embeds):
     if not embeds:
         return
@@ -262,8 +354,14 @@ def main():
     new_articles = diff_pokecawatch(state.get("pokecawatch", {}), pokecawatch_entries)
     new_gamepedia, updated_gamepedia = diff_hashed_entries(state.get("gamepedia", {}), gamepedia_entries)
 
+    now = datetime.now(JST)
+    reminder_embeds, reminders_sent = collect_deadline_reminders(
+        nyuka_entries, gamepedia_entries, now, state.get("reminders_sent", {})
+    )
+
     if is_first_run:
-        print("初回実行のため、通知は送らずに状態のみ保存します。")
+        print("初回実行のため、新着・更新の通知は送らずに状態のみ保存します。")
+        embeds = reminder_embeds
     else:
         gamepedia_embeds = []
         if is_gamepedia_first_run:
@@ -278,11 +376,20 @@ def main():
             + [build_nyuka_embed(e, is_update=True) for e in updated_items]
             + gamepedia_embeds
             + [build_pokecawatch_embed(e) for e in new_articles]
+            + reminder_embeds
         )
-        send_discord_embeds(embeds)
-        print(f"{len(embeds)}件の通知を送信しました。")
 
-    save_state({"nyuka_now": nyuka_entries, "pokecawatch": pokecawatch_entries, "gamepedia": gamepedia_entries})
+    send_discord_embeds(embeds)
+    print(f"{len(embeds)}件の通知を送信しました。")
+
+    save_state(
+        {
+            "nyuka_now": nyuka_entries,
+            "pokecawatch": pokecawatch_entries,
+            "gamepedia": gamepedia_entries,
+            "reminders_sent": reminders_sent,
+        }
+    )
 
 
 if __name__ == "__main__":
