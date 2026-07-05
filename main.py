@@ -221,15 +221,15 @@ def build_gamepedia_embed(entry, is_update):
         for label in GAMEPEDIA_FIELD_ORDER
         if label in data
     ]
-    embed = {
+    description = "攻略大百科"
+    if entry.get("detail_url"):
+        description += f"\n[応募・詳細ページはこちら]({entry['detail_url']})"
+    return {
         "title": f"{title_prefix}：{entry['shop']}",
-        "description": "攻略大百科",
+        "description": description,
         "fields": fields,
         "color": 0xFFA500 if is_update else 0x9B59B6,
     }
-    if entry.get("detail_url"):
-        embed["url"] = entry["detail_url"]
-    return embed
 
 
 def parse_deadline(text, now):
@@ -271,14 +271,14 @@ def entry_display_info(source, entry):
 
 
 def build_reminder_embed(name, label, url, tag):
-    embed = {
+    description = f"{label} - 応募をお忘れなく"
+    if url:
+        description += f"\n[応募・詳細ページはこちら]({url})"
+    return {
         "title": f"⏰ {tag}：{name}",
-        "description": f"{label} - 応募をお忘れなく",
+        "description": description,
         "color": 0xE74C3C,
     }
-    if url:
-        embed["url"] = url
-    return embed
 
 
 def collect_deadline_reminders(nyuka_entries, gamepedia_entries, now, reminded):
