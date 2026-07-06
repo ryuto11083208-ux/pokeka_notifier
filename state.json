@@ -1,5 +1,19 @@
 {
   "nyuka_now": {
+    "抽選・予約応募受付中のストア::晴れる屋2通販::ポケモンカード MEGAドリームex": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "晴れる屋2通販",
+      "data": {
+        "対象商品": "ポケモンカード MEGAドリームex",
+        "対象商品_url": "https://nyuka-now.com/archives/154697",
+        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
+        "開始日": "7月6日(月)10:00",
+        "当選発表": "2026年7月7日（火）～ 2026年7月8日（水）当選メール送付予定",
+        "応募条件": "晴れる屋2通販サイトの会員登録",
+        "応募ページ": "晴れる屋2通販の応募ページ",
+        "応募ページ_url": "https://www.hareruya2.com/pages/5th-anniv_lottery"
+      }
+    },
     "抽選・予約応募受付中のストア::竜星のPAO各店::ポケモンカード アビスアイ": {
       "section": "抽選・予約応募受付中のストア",
       "store": "竜星のPAO各店",
@@ -28,20 +42,6 @@
         "応募条件": "ジョーシンアプリのマイページ＞店舗限定キャンペーンエントリーより応募が可能です ※ジョーシンカードに購入履歴がある会員が対象",
         "詳細ページ": "ジョーシン（アプリ）の詳細ページ",
         "詳細ページ_url": "https://shop.joshin.co.jp/app/"
-      }
-    },
-    "抽選・予約応募受付中のストア::晴れる屋2通販::ポケモンカード アビスアイ": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "晴れる屋2通販",
-      "data": {
-        "対象商品": "ポケモンカード アビスアイ",
-        "対象商品_url": "https://nyuka-now.com/archives/157981",
-        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
-        "開始日": "7月5日(日)10:00",
-        "当選発表": "2026年7月7日（火）～ 2026年7月8日（水）当選メール送付予定",
-        "応募条件": "晴れる屋2通販サイトの会員登録",
-        "応募ページ": "晴れる屋2通販の応募ページ",
-        "応募ページ_url": "https://www.hareruya2.com/pages/5th-anniv_lottery"
       }
     },
     "抽選・予約応募受付中のストア::Ganryu秋葉原店::ポケモンカード MEGAドリームex ポケモンカード インフェルノX ポケモンカード スターターセットMEGA メガゲンガーex": {
@@ -236,6 +236,20 @@
         "詳細ページ_url": "https://www.amazon.co.jp/dp/B0GP9QHQ3Y?m=AN1VRQENFRJN5&aod=1&tag=nnowapp-22"
       }
     },
+    "近日受付開始予定のストア::イオンスタイルオンライン::ポケモンカード ストームエメラルダ": {
+      "section": "近日受付開始予定のストア",
+      "store": "イオンスタイルオンライン",
+      "data": {
+        "対象商品": "ポケモンカード ストームエメラルダ",
+        "対象商品_url": "https://nyuka-now.com/archives/157982",
+        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
+        "開始日": "7月8日(水)11:00",
+        "終了日": "7月9日(木)23:59",
+        "応募条件": "イオンスタイルオンライン会員限定",
+        "応募ページ": "イオンスタイルオンラインの応募ページ",
+        "応募ページ_url": "https://aeonretail.com/Page/k-lottery_sale.aspx"
+      }
+    },
     "近日受付開始予定のストア::おもちゃのペリカン各店::ポケモンカード ストームエメラルダ ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）": {
       "section": "近日受付開始予定のストア",
       "store": "おもちゃのペリカン各店",
@@ -277,7 +291,58 @@
       }
     }
   },
-  "pokecawatch": {},
+  "pokecawatch": {
+    "https://pokecawatch.com/?p=18903": {
+      "title": "【ポケカ】ストームエメラルダ　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-storm-emerald?utm_source=rss&utm_medium=rss&utm_campaign=lottery-storm-emerald",
+      "published": "Fri, 19 Jun 2026 07:52:53 +0000"
+    },
+    "https://pokecawatch.com/?p=18885": {
+      "title": "【ポケカ】ポケモンカードゲーム MEGA 30th CELEBRATION FUTURISTIC BOX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-futuristicbox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-futuristicbox",
+      "published": "Mon, 15 Jun 2026 06:42:01 +0000"
+    },
+    "https://pokecawatch.com/?p=18845": {
+      "title": "【ポケカ】30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-premium?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-premium",
+      "published": "Tue, 09 Jun 2026 01:38:38 +0000"
+    },
+    "https://pokecawatch.com/?p=18797": {
+      "title": "【ポケカ】30th CELEBRATION　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration",
+      "published": "Tue, 02 Jun 2026 08:33:34 +0000"
+    },
+    "https://pokecawatch.com/?p=17828": {
+      "title": "【ポケカ】アビスアイ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-abyss-eye?utm_source=rss&utm_medium=rss&utm_campaign=lottery-abyss-eye",
+      "published": "Mon, 20 Apr 2026 02:44:29 +0000"
+    },
+    "https://pokecawatch.com/?p=17724": {
+      "title": "【ポケカ】ニンジャスピナー 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-ninja-spinner?utm_source=rss&utm_medium=rss&utm_campaign=lottery-ninja-spinner",
+      "published": "Mon, 16 Feb 2026 11:26:09 +0000"
+    },
+    "https://pokecawatch.com/?p=17501": {
+      "title": "【ポケカ】ムニキスゼロ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-munikisu-zero?utm_source=rss&utm_medium=rss&utm_campaign=lottery-munikisu-zero",
+      "published": "Fri, 19 Dec 2025 12:20:58 +0000"
+    },
+    "https://pokecawatch.com/?p=16645": {
+      "title": "【ポケカ】MEGAドリームex 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-mega-dream-ex?utm_source=rss&utm_medium=rss&utm_campaign=lottery-mega-dream-ex",
+      "published": "Sat, 08 Nov 2025 10:56:26 +0000"
+    },
+    "https://pokecawatch.com/?p=16515": {
+      "title": "【ポケカ】インフェルノX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-infernox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-infernox",
+      "published": "Sun, 31 Aug 2025 16:05:41 +0000"
+    },
+    "https://pokecawatch.com/?p=16258": {
+      "title": "【ポケカ】メガブレイブ・メガシンフォニア　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-megabrave-mega-symphonia?utm_source=rss&utm_medium=rss&utm_campaign=lottery-megabrave-mega-symphonia",
+      "published": "Tue, 01 Jul 2025 08:20:01 +0000"
+    }
+  },
   "gamepedia": {
     "アビスアイ::product_schedule-637": {
       "product": "アビスアイ",
@@ -355,20 +420,6 @@
       },
       "detail_url": "https://www.amazon.co.jp/dp/B0FLD7HMRP?aod=1&m=AN1VRQENFRJN5&tag=gamepedia-pokeca-22"
     },
-    "スタートデッキ100 バトルコレクション::product_schedule-777": {
-      "product": "スタートデッキ100 バトルコレクション",
-      "shop": "トレカプラザ55通販店(3回目)",
-      "data": {
-        "対象商品": "スタートデッキ100 バトルコレクション",
-        "販売種別": "抽選",
-        "抽選開始日時": "6/27(土) 14:00",
-        "抽選終了日時": "7/7(火) 23:59",
-        "抽選結果発表": "7/9(木)~7/10(金)【当選メール】",
-        "購入期間": "7/13(月)23:59まで",
-        "購入制限等": "・1人1点まで ・トレカプラザ55通販店の会員登録が必要"
-      },
-      "detail_url": "https://docs.google.com/forms/d/e/1FAIpQLSfOu_4s4XpuHP7U29Yq9G_EZpSFEHPAKDaKAs58-8YCJUuZYQ/viewform"
-    },
     "スタートデッキ100 バトルコレクション::product_schedule-778": {
       "product": "スタートデッキ100 バトルコレクション",
       "shop": "イエローサブマリン(店舗)(4回目)",
@@ -382,6 +433,20 @@
         "購入制限等": "・1人1点まで"
       },
       "detail_url": "https://yellowsubmarine.co.jp/"
+    },
+    "スタートデッキ100 バトルコレクション::product_schedule-777": {
+      "product": "スタートデッキ100 バトルコレクション",
+      "shop": "トレカプラザ55通販店(3回目)",
+      "data": {
+        "対象商品": "スタートデッキ100 バトルコレクション",
+        "販売種別": "抽選",
+        "抽選開始日時": "6/27(土) 14:00",
+        "抽選終了日時": "7/7(火) 23:59",
+        "抽選結果発表": "7/9(木)~7/10(金)【当選メール】",
+        "購入期間": "7/13(月)23:59まで",
+        "購入制限等": "・1人1点まで ・トレカプラザ55通販店の会員登録が必要"
+      },
+      "detail_url": "https://docs.google.com/forms/d/e/1FAIpQLSfOu_4s4XpuHP7U29Yq9G_EZpSFEHPAKDaKAs58-8YCJUuZYQ/viewform"
     }
   },
   "reminders_sent": {
