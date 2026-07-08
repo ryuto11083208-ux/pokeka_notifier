@@ -1,5 +1,33 @@
 {
   "nyuka_now": {
+    "抽選・予約応募受付中のストア::フルコンプ 一部店舗::ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "フルコンプ 一部店舗",
+      "data": {
+        "対象商品": "ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）",
+        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
+        "開始日": "7月8日(水)13:00",
+        "終了日": "7月17日(金)12:00",
+        "当選発表": "2026年7月23日 ～ 7月24日中",
+        "応募条件": "・応募にはLivePocket会員登録が必要 ・応募時に「プレイヤーID」（0を含む10桁の数字）が必要（ログインIDとは別）。未取得の方はポケモンカードゲーム公式HPより取得 ・1人1回・1店舗のみ応募可能（重複応募は無効） ・受取時に当選チケット（QRコード）と公的身分証明書の提示が必要 ・当選者本人のみ応募店舗にて購入可能（代理購入・譲渡不可） ・スクリーンショット・画像・コピーによる提示は無効（マイチケットからQRコードを直接表示）",
+        "詳細ページ": "フルコンプ 一部店舗の詳細ページ",
+        "詳細ページ_url": "https://livepocket.jp/e/mof0l"
+      }
+    },
+    "抽選・予約応募受付中のストア::イオンスタイルオンライン::ポケモンカード ストームエメラルダ": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "イオンスタイルオンライン",
+      "data": {
+        "対象商品": "ポケモンカード ストームエメラルダ",
+        "対象商品_url": "https://nyuka-now.com/archives/157982",
+        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
+        "開始日": "7月8日(水)11:00",
+        "終了日": "7月9日(木)23:59",
+        "応募条件": "イオンスタイルオンライン会員限定",
+        "応募ページ": "イオンスタイルオンラインの応募ページ",
+        "応募ページ_url": "https://aeonretail.com/Page/k-lottery_sale.aspx"
+      }
+    },
     "抽選・予約応募受付中のストア::ジョーシン（アプリ）::ポケモンカード スタートデッキ100 バトルコレクション": {
       "section": "抽選・予約応募受付中のストア",
       "store": "ジョーシン（アプリ）",
@@ -122,18 +150,19 @@
         "詳細ページ_url": "https://www.amazon.co.jp/dp/B0GP9QHQ3Y?m=AN1VRQENFRJN5&aod=1&tag=nnowapp-22"
       }
     },
-    "近日受付開始予定のストア::イオンスタイルオンライン::ポケモンカード ストームエメラルダ": {
+    "近日受付開始予定のストア::ヤマダデンキ::ポケモンカード アビスアイ": {
       "section": "近日受付開始予定のストア",
-      "store": "イオンスタイルオンライン",
+      "store": "ヤマダデンキ",
       "data": {
-        "対象商品": "ポケモンカード ストームエメラルダ",
-        "対象商品_url": "https://nyuka-now.com/archives/157982",
-        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
-        "開始日": "7月8日(水)11:00",
-        "終了日": "7月9日(木)23:59",
-        "応募条件": "イオンスタイルオンライン会員限定",
-        "応募ページ": "イオンスタイルオンラインの応募ページ",
-        "応募ページ_url": "https://aeonretail.com/Page/k-lottery_sale.aspx"
+        "対象商品": "ポケモンカード アビスアイ",
+        "対象商品_url": "https://nyuka-now.com/archives/157981",
+        "抽選形式": "アプリ抽選受付（当選者には店頭販売）",
+        "開始日": "7月8日(水)23:00",
+        "終了日": "7月10日(金)23:59",
+        "当選発表": "7/22",
+        "応募条件": "「ヤマダデジタル会員」アプリからの申込限定 ※おもちゃ取扱店舗限定 【申込手順】 アプリ内の「店頭セール」タブをタップ→スクロールして「抽選販売受付」バナーを探してタップ→受付フォームから抽選申込 購入履歴による応募条件あり",
+        "詳細ページ": "ヤマダデンキの詳細ページ",
+        "詳細ページ_url": "https://www.yamada-denki.jp/service/pointservice/digital-kaiin.html"
       }
     },
     "近日受付開始予定のストア::おもちゃのペリカン各店::ポケモンカード ストームエメラルダ ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）": {
@@ -151,6 +180,33 @@
         "詳細ページ_url": "https://pelican-toy.co.jp/shop/"
       }
     },
+    "近日受付開始予定のストア::イオンスタイルオンライン::ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）": {
+      "section": "近日受付開始予定のストア",
+      "store": "イオンスタイルオンライン",
+      "data": {
+        "対象商品": "ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）",
+        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
+        "開始日": "7月9日(木)11:00",
+        "終了日": "7月10日(金)23:59",
+        "当選発表": "2026年7月16日(木)12:00頃",
+        "応募条件": "イオンスタイルオンライン会員限定",
+        "応募ページ": "イオンスタイルオンラインの応募ページ",
+        "応募ページ_url": "https://aeonretail.com/Page/k-lottery_pokemon_com.aspx"
+      }
+    },
+    "近日受付開始予定のストア::楽天ブックス::ポケモンカード ストームエメラルダ ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）": {
+      "section": "近日受付開始予定のストア",
+      "store": "楽天ブックス",
+      "data": {
+        "対象商品": "ポケモンカード ストームエメラルダ ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）",
+        "対象商品_url": "https://nyuka-now.com/archives/157982",
+        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
+        "開始日": "7月13日(月)10:00",
+        "終了日": "7月17日(金)9:59",
+        "応募ページ": "楽天ブックスの応募ページ",
+        "応募ページ_url": "https://hb.afl.rakuten.co.jp/hgc/1f892dc2.c9f46e5f.1f892dc3.1307877f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Fsearch%3Fsitem%3D%25E3%2583%259D%25E3%2582%25B1%25E3%2583%25A2%25E3%2583%25B3%25E3%2582%25AB%25E3%2583%25BC%25E3%2583%2589%26s%3D2%26l-id%3Dsearch-c-arrange-03"
+      }
+    },
     "近日受付開始予定のストア::ゲオ::ポケモンカード スタートデッキ100 バトルコレクション ポケモンカード ストームエメラルダ ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）": {
       "section": "近日受付開始予定のストア",
       "store": "ゲオ",
@@ -163,6 +219,20 @@
         "応募条件": "①店舗レンタル会員機能を追加したPontaカードをお持ちでゲオアプリとPonta会員IDとの連携済のお客様 ②当選後ご購入時に、本人確認書類と 店舗レンタル会員機能付き会員証(Pontaカードまたはゲオアプリ会員証）を提示していただけるお客様",
         "詳細ページ": "ゲオの詳細ページ",
         "詳細ページ_url": "https://geo-online.co.jp/news/"
+      }
+    },
+    "近日受付開始予定のストア::平和堂::ポケモンカード ストームエメラルダ ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）": {
+      "section": "近日受付開始予定のストア",
+      "store": "平和堂",
+      "data": {
+        "対象商品": "ポケモンカード ストームエメラルダ ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）",
+        "対象商品_url": "https://nyuka-now.com/archives/157982",
+        "抽選形式": "アプリ抽選受付（当選者には店頭販売）",
+        "開始日": "7月13日(月)12:00",
+        "終了日": "7月14日(火)23:59",
+        "当選発表": "7月30日(木)午前",
+        "詳細ページ": "平和堂の詳細ページ",
+        "詳細ページ_url": "https://www.heiwado.jp/service/hopapp"
       }
     },
     "近日受付開始予定のストア::イトーヨーカドー各店::ポケモンカード ストームエメラルダ BOX、スターターセットex イーブイex / ゾロア＆ゾロアークex / ニャオハ＆マスカーニャex": {
@@ -189,7 +259,58 @@
       }
     }
   },
-  "pokecawatch": {},
+  "pokecawatch": {
+    "https://pokecawatch.com/?p=18903": {
+      "title": "【ポケカ】ストームエメラルダ　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-storm-emerald?utm_source=rss&utm_medium=rss&utm_campaign=lottery-storm-emerald",
+      "published": "Fri, 19 Jun 2026 07:52:53 +0000"
+    },
+    "https://pokecawatch.com/?p=18885": {
+      "title": "【ポケカ】ポケモンカードゲーム MEGA 30th CELEBRATION FUTURISTIC BOX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-futuristicbox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-futuristicbox",
+      "published": "Mon, 15 Jun 2026 06:42:01 +0000"
+    },
+    "https://pokecawatch.com/?p=18845": {
+      "title": "【ポケカ】30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-premium?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-premium",
+      "published": "Tue, 09 Jun 2026 01:38:38 +0000"
+    },
+    "https://pokecawatch.com/?p=18797": {
+      "title": "【ポケカ】30th CELEBRATION　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration",
+      "published": "Tue, 02 Jun 2026 08:33:34 +0000"
+    },
+    "https://pokecawatch.com/?p=17828": {
+      "title": "【ポケカ】アビスアイ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-abyss-eye?utm_source=rss&utm_medium=rss&utm_campaign=lottery-abyss-eye",
+      "published": "Mon, 20 Apr 2026 02:44:29 +0000"
+    },
+    "https://pokecawatch.com/?p=17724": {
+      "title": "【ポケカ】ニンジャスピナー 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-ninja-spinner?utm_source=rss&utm_medium=rss&utm_campaign=lottery-ninja-spinner",
+      "published": "Mon, 16 Feb 2026 11:26:09 +0000"
+    },
+    "https://pokecawatch.com/?p=17501": {
+      "title": "【ポケカ】ムニキスゼロ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-munikisu-zero?utm_source=rss&utm_medium=rss&utm_campaign=lottery-munikisu-zero",
+      "published": "Fri, 19 Dec 2025 12:20:58 +0000"
+    },
+    "https://pokecawatch.com/?p=16645": {
+      "title": "【ポケカ】MEGAドリームex 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-mega-dream-ex?utm_source=rss&utm_medium=rss&utm_campaign=lottery-mega-dream-ex",
+      "published": "Sat, 08 Nov 2025 10:56:26 +0000"
+    },
+    "https://pokecawatch.com/?p=16515": {
+      "title": "【ポケカ】インフェルノX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-infernox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-infernox",
+      "published": "Sun, 31 Aug 2025 16:05:41 +0000"
+    },
+    "https://pokecawatch.com/?p=16258": {
+      "title": "【ポケカ】メガブレイブ・メガシンフォニア　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-megabrave-mega-symphonia?utm_source=rss&utm_medium=rss&utm_campaign=lottery-megabrave-mega-symphonia",
+      "published": "Tue, 01 Jul 2025 08:20:01 +0000"
+    }
+  },
   "gamepedia": {
     "アビスアイ::product_schedule-637": {
       "product": "アビスアイ",
@@ -258,7 +379,7 @@
     "nyuka_now::抽選・予約応募受付中のストア::ジョーシン（アプリ）::ポケモンカード スタートデッキ100 バトルコレクション": [
       "明日締切"
     ],
-    "nyuka_now::近日受付開始予定のストア::イオンスタイルオンライン::ポケモンカード ストームエメラルダ": [
+    "nyuka_now::抽選・予約応募受付中のストア::イオンスタイルオンライン::ポケモンカード ストームエメラルダ": [
       "明日締切"
     ]
   }
