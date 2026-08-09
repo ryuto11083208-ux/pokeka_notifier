@@ -1,33 +1,5 @@
 {
   "nyuka_now": {
-    "抽選・予約応募受付中のストア::お宝創庫・プレイズ::ポケモンカード スタートデッキ100 バトルコレクション": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "お宝創庫・プレイズ",
-      "data": {
-        "対象商品": "ポケモンカード スタートデッキ100 バトルコレクション",
-        "対象商品_url": "https://nyuka-now.com/archives/154698",
-        "抽選形式": "アプリ抽選受付（当選者には店頭販売）",
-        "開始日": "8月6日(木)12:00",
-        "終了日": "8月9日(日)23:45",
-        "応募条件": "・ポイント共有手続き済みのお宝創庫グループアプリ会員のお客様 ・過去1年以内にお宝創庫グループ店舗にて会員証を提示頂いて売買利用した履歴があるお客様",
-        "詳細ページ": "お宝創庫・プレイズの詳細ページ",
-        "詳細ページ_url": "https://www.otakarasouko.com/information/95974455/#gsc.tab=0"
-      }
-    },
-    "抽選・予約応募受付中のストア::お宝創庫・プレイズ::ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード メガシンフォニア": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "お宝創庫・プレイズ",
-      "data": {
-        "対象商品": "ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード メガシンフォニア",
-        "対象商品_url": "https://nyuka-now.com/archives/157982",
-        "抽選形式": "アプリ抽選受付（当選者には店頭販売）",
-        "開始日": "8月6日(木)12:00",
-        "終了日": "8月9日(日)23:45",
-        "応募条件": "・ポイント共有手続き済みのお宝創庫グループアプリ会員のお客様 ・過去1年以内にお宝創庫グループ店舗にて会員証を提示頂いて売買利用した履歴があるお客様",
-        "詳細ページ": "お宝創庫・プレイズの詳細ページ",
-        "詳細ページ_url": "https://www.otakarasouko.com/information/95974456/#gsc.tab=0"
-      }
-    },
     "抽選・予約応募受付中のストア::エディオン・トレカキャピタル各店::ポケモンカード スタートデッキ100 バトルコレクション ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード メガシンフォニア": {
       "section": "抽選・予約応募受付中のストア",
       "store": "エディオン・トレカキャピタル各店",
@@ -41,34 +13,6 @@
         "応募条件": "当社各種会員限定（クレジット機能付エディオンカード会員、あんしん保証会員、アプリ会員、ID会員が対象）",
         "詳細ページ": "エディオン トレカキャピタル",
         "詳細ページ_url": "https://edion-cp.com/pokeca082801"
-      }
-    },
-    "抽選・予約応募受付中のストア::イエローサブマリン各店::ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード メガシンフォニア": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "イエローサブマリン各店",
-      "data": {
-        "対象商品": "ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード メガシンフォニア",
-        "対象商品_url": "https://nyuka-now.com/archives/157982",
-        "抽選形式": "店頭抽選受付（当選者には店頭販売）",
-        "開始日": "8月5日(水)10:00",
-        "終了日": "8月9日(日)20:00",
-        "当選発表": "8月14日予定",
-        "応募条件": "各店掲示のポスターより申込みページへ 指定期間内の最低購入金額300円以上のレシートが必要。 ▼販売店舗 イエローサブマリン　新宿店 https://twitter.com/YS_SHINJYUKU イエローサブマリン　池袋ゲームショップ https://twitter.com/YS_IKEBUKURO イエローサブマリン 秋葉原ラジオ会館本店 https://twitter.com/YS_AKIHABARAGAM イエローサブマリン　立川店 https://twitter.com/YS_TACHIKAWA イエローサブマリン プレイソフト https://twitter.com/YS_PLAYSOFT イエローサブマリン横浜店 https://twitter.com/YS_YOKOHAMA イエローサブマリン横浜ムービル店 https://twitter.com/YS_MOVIL イエローサブマリン川崎店 https://twitter.com/kawasak16976953 イエローサブマリン町田GAME SHOP https://twitter.com/machida19 イエローサブマリン千葉ゲームショップ https://twitter.com/chibagame イエローサブマリン柏マルイ店 https://twitter.com/YS_KASHIWA イエローサブマリン札幌GAME SHOP TCGフロア https://twitter.com/YS_SAPPORO1 イエローサブマリン広島店 https://twitter.com/YS_HIROSHIMAGS イエローサブマリン三宮店 https://twitter.com/YS_SANNNOMIYA イエローサブマリン名古屋GAMESHOP https://twitter.com/YS_NAGOYAGAME イエローサブマリン京都店 https://twitter.com/YS_KYOTO イエローサブマリン姫路店 https://twitter.com/YS_HIMEJI イエローサブマリン マジッカーズ福岡店 https://twitter.com/YS_M_FUKUOKA ※詳細は各店舗のツイートをご確認ください。",
-        "応募条件_url": "https://twitter.com/YS_SHINJYUKU",
-        "詳細ページ": "イエローサブマリン各店の詳細ページ",
-        "詳細ページ_url": "https://x.com/YS_INFO/"
-      }
-    },
-    "抽選・予約応募受付中のストア::しまむらパーク::ポケモンカード アビスアイ ポケモンカード スタートデッキ100 バトルコレクション ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード メガシンフォニア": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "しまむらパーク",
-      "data": {
-        "対象商品": "ポケモンカード アビスアイ ポケモンカード スタートデッキ100 バトルコレクション ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード メガシンフォニア",
-        "対象商品_url": "https://nyuka-now.com/archives/157981",
-        "抽選形式": "アプリ抽選受付（当選者にはオンライン販売）",
-        "当選発表": "8月10日（月）午前中予定",
-        "応募ページ": "しまむらパークの応募ページ",
-        "応募ページ_url": "https://www.shop-shimamura.com/disp/itemlist/?q=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89&b=birthday"
       }
     },
     "抽選・予約応募受付中のストア::ノジマオンライン::ポケモンカード、ワンピースカード、ドラゴンボールフュージョンワールド新弾各種": {
@@ -124,7 +68,58 @@
       }
     }
   },
-  "pokecawatch": {},
+  "pokecawatch": {
+    "https://pokecawatch.com/?p=18797": {
+      "title": "【ポケカ】30th CELEBRATION　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration",
+      "published": "Thu, 02 Jul 2026 08:33:00 +0000"
+    },
+    "https://pokecawatch.com/?p=18845": {
+      "title": "【ポケカ】30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-premium?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-premium",
+      "published": "Wed, 01 Jul 2026 19:38:00 +0000"
+    },
+    "https://pokecawatch.com/?p=18885": {
+      "title": "【ポケカ】ポケモンカードゲーム MEGA 30th CELEBRATION FUTURISTIC BOX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-futuristicbox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-futuristicbox",
+      "published": "Wed, 01 Jul 2026 06:42:01 +0000"
+    },
+    "https://pokecawatch.com/?p=18903": {
+      "title": "【ポケカ】ストームエメラルダ　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-storm-emerald?utm_source=rss&utm_medium=rss&utm_campaign=lottery-storm-emerald",
+      "published": "Fri, 19 Jun 2026 07:52:53 +0000"
+    },
+    "https://pokecawatch.com/?p=17828": {
+      "title": "【ポケカ】アビスアイ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-abyss-eye?utm_source=rss&utm_medium=rss&utm_campaign=lottery-abyss-eye",
+      "published": "Mon, 20 Apr 2026 02:44:29 +0000"
+    },
+    "https://pokecawatch.com/?p=17724": {
+      "title": "【ポケカ】ニンジャスピナー 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-ninja-spinner?utm_source=rss&utm_medium=rss&utm_campaign=lottery-ninja-spinner",
+      "published": "Mon, 16 Feb 2026 11:26:09 +0000"
+    },
+    "https://pokecawatch.com/?p=17501": {
+      "title": "【ポケカ】ムニキスゼロ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-munikisu-zero?utm_source=rss&utm_medium=rss&utm_campaign=lottery-munikisu-zero",
+      "published": "Fri, 19 Dec 2025 12:20:58 +0000"
+    },
+    "https://pokecawatch.com/?p=16645": {
+      "title": "【ポケカ】MEGAドリームex 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-mega-dream-ex?utm_source=rss&utm_medium=rss&utm_campaign=lottery-mega-dream-ex",
+      "published": "Sat, 08 Nov 2025 10:56:26 +0000"
+    },
+    "https://pokecawatch.com/?p=16515": {
+      "title": "【ポケカ】インフェルノX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-infernox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-infernox",
+      "published": "Sun, 31 Aug 2025 16:05:41 +0000"
+    },
+    "https://pokecawatch.com/?p=16258": {
+      "title": "【ポケカ】メガブレイブ・メガシンフォニア　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-megabrave-mega-symphonia?utm_source=rss&utm_medium=rss&utm_campaign=lottery-megabrave-mega-symphonia",
+      "published": "Tue, 01 Jul 2025 08:20:01 +0000"
+    }
+  },
   "gamepedia": {
     "アビスアイ::product_schedule-637": {
       "product": "アビスアイ",
@@ -189,18 +184,5 @@
       "detail_url": "https://www.amazon.co.jp/dp/B0FLD7HMRP?aod=1&m=AN1VRQENFRJN5&tag=gamepedia-pokeca-22"
     }
   },
-  "reminders_sent": {
-    "nyuka_now::抽選・予約応募受付中のストア::お宝創庫・プレイズ::ポケモンカード スタートデッキ100 バトルコレクション": [
-      "明日締切",
-      "本日締切"
-    ],
-    "nyuka_now::抽選・予約応募受付中のストア::お宝創庫・プレイズ::ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード メガシンフォニア": [
-      "明日締切",
-      "本日締切"
-    ],
-    "nyuka_now::抽選・予約応募受付中のストア::イエローサブマリン各店::ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード メガシンフォニア": [
-      "明日締切",
-      "本日締切"
-    ]
-  }
+  "reminders_sent": {}
 }
