@@ -136,6 +136,22 @@
         "詳細ページ": "Amazonの詳細ページ",
         "詳細ページ_url": "https://www.amazon.co.jp/dp/B0GXCRBL5J?m=AN1VRQENFRJN&aod=1&tag=nnowapp-22"
       }
+    },
+    "近日受付開始予定のストア::イエローサブマリン各店::ポケモンカード ストームエメラルダ": {
+      "section": "近日受付開始予定のストア",
+      "store": "イエローサブマリン各店",
+      "data": {
+        "対象商品": "ポケモンカード ストームエメラルダ",
+        "対象商品_url": "https://nyuka-now.com/archives/157982",
+        "抽選形式": "店頭抽選受付（当選者には店頭販売）",
+        "開始日": "8月17日(月)10:00",
+        "終了日": "8月23日(日)20:00",
+        "当選発表": "8月26日予定",
+        "応募条件": "各店掲示のポスターより申込みページへ 指定期間内の最低購入金額300円以上のレシートが必要。 ▼販売店舗 イエローサブマリン　新宿店 https://twitter.com/YS_SHINJYUKU イエローサブマリン　池袋ゲームショップ https://twitter.com/YS_IKEBUKURO イエローサブマリン 秋葉原ラジオ会館本店 https://twitter.com/YS_AKIHABARAGAM イエローサブマリン　立川店 https://twitter.com/YS_TACHIKAWA イエローサブマリン プレイソフト https://twitter.com/YS_PLAYSOFT イエローサブマリン横浜店 https://twitter.com/YS_YOKOHAMA イエローサブマリン横浜ムービル店 https://twitter.com/YS_MOVIL イエローサブマリン川崎店 https://twitter.com/kawasak16976953 イエローサブマリン町田GAME SHOP https://twitter.com/machida19 イエローサブマリン千葉ゲームショップ https://twitter.com/chibagame イエローサブマリン柏マルイ店 https://twitter.com/YS_KASHIWA イエローサブマリン札幌GAME SHOP TCGフロア https://twitter.com/YS_SAPPORO1 イエローサブマリン広島店 https://twitter.com/YS_HIROSHIMAGS イエローサブマリン三宮店 https://twitter.com/YS_SANNNOMIYA イエローサブマリン名古屋GAMESHOP https://twitter.com/YS_NAGOYAGAME イエローサブマリン京都店 https://twitter.com/YS_KYOTO イエローサブマリン姫路店 https://twitter.com/YS_HIMEJI イエローサブマリン マジッカーズ福岡店 https://twitter.com/YS_M_FUKUOKA ※詳細は各店舗のツイートをご確認ください。",
+        "応募条件_url": "https://twitter.com/YS_SHINJYUKU",
+        "詳細ページ": "イエローサブマリン各店の詳細ページ",
+        "詳細ページ_url": "https://x.com/YS_INFO/"
+      }
     }
   },
   "pokecawatch": {
