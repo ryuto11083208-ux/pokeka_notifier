@@ -247,6 +247,10 @@
   },
   "reminders_sent": {
     "nyuka_now::抽選・予約応募受付中のストア::ヤマダデンキ::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": [
+      "明日締切",
+      "本日締切"
+    ],
+    "nyuka_now::近日受付開始予定のストア::イオンスタイルオンライン::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": [
       "明日締切"
     ]
   }
