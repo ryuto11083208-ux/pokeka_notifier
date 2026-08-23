@@ -186,6 +186,20 @@
         "詳細ページ_url": "https://shop.joshin.co.jp/app/"
       }
     },
+    "近日受付開始予定のストア::イエローサブマリン各店::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
+      "section": "近日受付開始予定のストア",
+      "store": "イエローサブマリン各店",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "店頭抽選受付（当選者には店頭販売）",
+        "開始日": "8月24日(月)10:00",
+        "応募条件": "各店掲示のポスターより申込みページへ 指定期間内の最低購入金額300円以上のレシートが必要。 ▼販売店舗 イエローサブマリン　新宿店 https://twitter.com/YS_SHINJYUKU イエローサブマリン　池袋ゲームショップ https://twitter.com/YS_IKEBUKURO イエローサブマリン 秋葉原ラジオ会館本店 https://twitter.com/YS_AKIHABARAGAM イエローサブマリン　立川店 https://twitter.com/YS_TACHIKAWA イエローサブマリン プレイソフト https://twitter.com/YS_PLAYSOFT イエローサブマリン横浜店 https://twitter.com/YS_YOKOHAMA イエローサブマリン横浜ムービル店 https://twitter.com/YS_MOVIL イエローサブマリン川崎店 https://twitter.com/kawasak16976953 イエローサブマリン町田GAME SHOP https://twitter.com/machida19 イエローサブマリン千葉ゲームショップ https://twitter.com/chibagame イエローサブマリン柏マルイ店 https://twitter.com/YS_KASHIWA イエローサブマリン札幌GAME SHOP TCGフロア https://twitter.com/YS_SAPPORO1 イエローサブマリン広島店 https://twitter.com/YS_HIROSHIMAGS イエローサブマリン三宮店 https://twitter.com/YS_SANNNOMIYA イエローサブマリン名古屋GAMESHOP https://twitter.com/YS_NAGOYAGAME イエローサブマリン京都店 https://twitter.com/YS_KYOTO イエローサブマリン姫路店 https://twitter.com/YS_HIMEJI イエローサブマリン マジッカーズ福岡店 https://twitter.com/YS_M_FUKUOKA ※詳細は各店舗のツイートをご確認ください。",
+        "応募条件_url": "https://twitter.com/YS_SHINJYUKU",
+        "詳細ページ": "イエローサブマリン各店の詳細ページ",
+        "詳細ページ_url": "https://x.com/YS_INFO/"
+      }
+    },
     "近日受付開始予定のストア::ゲオ::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
       "section": "近日受付開始予定のストア",
       "store": "ゲオ",
@@ -216,7 +230,58 @@
       }
     }
   },
-  "pokecawatch": {},
+  "pokecawatch": {
+    "https://pokecawatch.com/?p=18797": {
+      "title": "【ポケカ】30th CELEBRATION　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration",
+      "published": "Thu, 02 Jul 2026 08:33:00 +0000"
+    },
+    "https://pokecawatch.com/?p=18845": {
+      "title": "【ポケカ】30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-premium?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-premium",
+      "published": "Wed, 01 Jul 2026 19:38:00 +0000"
+    },
+    "https://pokecawatch.com/?p=18885": {
+      "title": "【ポケカ】ポケモンカードゲーム MEGA 30th CELEBRATION FUTURISTIC BOX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-futuristicbox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-futuristicbox",
+      "published": "Wed, 01 Jul 2026 06:42:01 +0000"
+    },
+    "https://pokecawatch.com/?p=18903": {
+      "title": "【ポケカ】ストームエメラルダ　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-storm-emerald?utm_source=rss&utm_medium=rss&utm_campaign=lottery-storm-emerald",
+      "published": "Fri, 19 Jun 2026 07:52:53 +0000"
+    },
+    "https://pokecawatch.com/?p=17828": {
+      "title": "【ポケカ】アビスアイ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-abyss-eye?utm_source=rss&utm_medium=rss&utm_campaign=lottery-abyss-eye",
+      "published": "Mon, 20 Apr 2026 02:44:29 +0000"
+    },
+    "https://pokecawatch.com/?p=17724": {
+      "title": "【ポケカ】ニンジャスピナー 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-ninja-spinner?utm_source=rss&utm_medium=rss&utm_campaign=lottery-ninja-spinner",
+      "published": "Mon, 16 Feb 2026 11:26:09 +0000"
+    },
+    "https://pokecawatch.com/?p=17501": {
+      "title": "【ポケカ】ムニキスゼロ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-munikisu-zero?utm_source=rss&utm_medium=rss&utm_campaign=lottery-munikisu-zero",
+      "published": "Fri, 19 Dec 2025 12:20:58 +0000"
+    },
+    "https://pokecawatch.com/?p=16645": {
+      "title": "【ポケカ】MEGAドリームex 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-mega-dream-ex?utm_source=rss&utm_medium=rss&utm_campaign=lottery-mega-dream-ex",
+      "published": "Sat, 08 Nov 2025 10:56:26 +0000"
+    },
+    "https://pokecawatch.com/?p=16515": {
+      "title": "【ポケカ】インフェルノX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-infernox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-infernox",
+      "published": "Sun, 31 Aug 2025 16:05:41 +0000"
+    },
+    "https://pokecawatch.com/?p=16258": {
+      "title": "【ポケカ】メガブレイブ・メガシンフォニア　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-megabrave-mega-symphonia?utm_source=rss&utm_medium=rss&utm_campaign=lottery-megabrave-mega-symphonia",
+      "published": "Tue, 01 Jul 2025 08:20:01 +0000"
+    }
+  },
   "gamepedia": {
     "アビスアイ::product_schedule-637": {
       "product": "アビスアイ",
