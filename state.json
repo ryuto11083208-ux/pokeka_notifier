@@ -1,5 +1,18 @@
 {
   "nyuka_now": {
+    "抽選・予約応募受付中のストア::ヤマシロヤ オンラインショップ::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "ヤマシロヤ オンラインショップ",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
+        "開始日": "8月26日(水)21:30",
+        "終了日": "8月29日(土)21:30",
+        "応募ページ": "ヤマシロヤ オンラインショップの応募ページ",
+        "応募ページ_url": "https://docs.google.com/forms/d/e/1FAIpQLScytzgAKp5_lG4ridX-fInrczRr5JizWjliOxMGulKLnAMrfw/closedform"
+      }
+    },
     "抽選・予約応募受付中のストア::トレカプラザ55通販::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
       "section": "抽選・予約応募受付中のストア",
       "store": "トレカプラザ55通販",
