@@ -1,5 +1,33 @@
 {
   "nyuka_now": {
+    "抽選・予約応募受付中のストア::ドラゴンスター各店::ポケモンカード ストームエメラルダ": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "ドラゴンスター各店",
+      "data": {
+        "対象商品": "ポケモンカード ストームエメラルダ",
+        "対象商品_url": "https://nyuka-now.com/archives/157982",
+        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
+        "開始日": "8月26日(水)22:30",
+        "終了日": "8月30日(日)23:59",
+        "当選発表": "9/4予定",
+        "詳細ページ": "ドラゴンスター各店の詳細ページ",
+        "詳細ページ_url": "https://dorasuta.membercard.jp/lottery"
+      }
+    },
+    "抽選・予約応募受付中のストア::ドラゴンスター各店::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "ドラゴンスター各店",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
+        "開始日": "8月26日(水)22:30",
+        "終了日": "9月6日(日)23:59",
+        "当選発表": "9/12予定",
+        "詳細ページ": "ドラゴンスター各店の詳細ページ",
+        "詳細ページ_url": "https://dorasuta.membercard.jp/lottery"
+      }
+    },
     "抽選・予約応募受付中のストア::ヤマシロヤ オンラインショップ::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
       "section": "抽選・予約応募受付中のストア",
       "store": "ヤマシロヤ オンラインショップ",
@@ -52,21 +80,6 @@
         "終了日": "8月27日(木)23:59",
         "応募ページ": "ドラゴンスター通販の応募ページ",
         "応募ページ_url": "https://dorasuta.membercard.jp/lottery"
-      }
-    },
-    "抽選・予約応募受付中のストア::ヤマダデンキ::ポケモンカード スタートデッキ100 バトルコレクション ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex） ポケモンカード メガシンフォニア": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "ヤマダデンキ",
-      "data": {
-        "対象商品": "ポケモンカード スタートデッキ100 バトルコレクション ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex） ポケモンカード メガシンフォニア",
-        "対象商品_url": "https://nyuka-now.com/archives/154698",
-        "抽選形式": "アプリ抽選受付（当選者には店頭販売）",
-        "開始日": "8月24日(月)23:00",
-        "終了日": "8月26日(水)23:59",
-        "当選発表": "9/10 12:00頃",
-        "応募条件": "「ヤマダデジタル会員」アプリからの申込限定 ※おもちゃ取扱店舗限定 【申込手順】 アプリ内の「店頭セール」タブをタップ→スクロールして「抽選販売受付」バナーを探してタップ→受付フォームから抽選申込 購入履歴による応募条件あり",
-        "詳細ページ": "ヤマダデンキの詳細ページ",
-        "詳細ページ_url": "https://www.yamada-denki.jp/service/pointservice/digital-kaiin.html"
       }
     },
     "抽選・予約応募受付中のストア::トレカエース各店::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
@@ -310,7 +323,58 @@
       }
     }
   },
-  "pokecawatch": {},
+  "pokecawatch": {
+    "https://pokecawatch.com/?p=18797": {
+      "title": "【ポケカ】30th CELEBRATION　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration",
+      "published": "Thu, 02 Jul 2026 08:33:00 +0000"
+    },
+    "https://pokecawatch.com/?p=18845": {
+      "title": "【ポケカ】30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-premium?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-premium",
+      "published": "Wed, 01 Jul 2026 19:38:00 +0000"
+    },
+    "https://pokecawatch.com/?p=18885": {
+      "title": "【ポケカ】ポケモンカードゲーム MEGA 30th CELEBRATION FUTURISTIC BOX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-futuristicbox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-futuristicbox",
+      "published": "Wed, 01 Jul 2026 06:42:01 +0000"
+    },
+    "https://pokecawatch.com/?p=18903": {
+      "title": "【ポケカ】ストームエメラルダ　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-storm-emerald?utm_source=rss&utm_medium=rss&utm_campaign=lottery-storm-emerald",
+      "published": "Fri, 19 Jun 2026 07:52:53 +0000"
+    },
+    "https://pokecawatch.com/?p=17828": {
+      "title": "【ポケカ】アビスアイ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-abyss-eye?utm_source=rss&utm_medium=rss&utm_campaign=lottery-abyss-eye",
+      "published": "Mon, 20 Apr 2026 02:44:29 +0000"
+    },
+    "https://pokecawatch.com/?p=17724": {
+      "title": "【ポケカ】ニンジャスピナー 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-ninja-spinner?utm_source=rss&utm_medium=rss&utm_campaign=lottery-ninja-spinner",
+      "published": "Mon, 16 Feb 2026 11:26:09 +0000"
+    },
+    "https://pokecawatch.com/?p=17501": {
+      "title": "【ポケカ】ムニキスゼロ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-munikisu-zero?utm_source=rss&utm_medium=rss&utm_campaign=lottery-munikisu-zero",
+      "published": "Fri, 19 Dec 2025 12:20:58 +0000"
+    },
+    "https://pokecawatch.com/?p=16645": {
+      "title": "【ポケカ】MEGAドリームex 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-mega-dream-ex?utm_source=rss&utm_medium=rss&utm_campaign=lottery-mega-dream-ex",
+      "published": "Sat, 08 Nov 2025 10:56:26 +0000"
+    },
+    "https://pokecawatch.com/?p=16515": {
+      "title": "【ポケカ】インフェルノX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-infernox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-infernox",
+      "published": "Sun, 31 Aug 2025 16:05:41 +0000"
+    },
+    "https://pokecawatch.com/?p=16258": {
+      "title": "【ポケカ】メガブレイブ・メガシンフォニア　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-megabrave-mega-symphonia?utm_source=rss&utm_medium=rss&utm_campaign=lottery-megabrave-mega-symphonia",
+      "published": "Tue, 01 Jul 2025 08:20:01 +0000"
+    }
+  },
   "gamepedia": {
     "アビスアイ::product_schedule-637": {
       "product": "アビスアイ",
@@ -376,21 +440,21 @@
     }
   },
   "reminders_sent": {
-    "nyuka_now::抽選・予約応募受付中のストア::ヤマダデンキ::ポケモンカード スタートデッキ100 バトルコレクション ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex） ポケモンカード メガシンフォニア": [
+    "nyuka_now::抽選・予約応募受付中のストア::ドラゴンスター通販::ポケモンカード メガブレイブ ポケモンカード メガシンフォニア": [
       "明日締切",
       "本日締切"
     ],
-    "nyuka_now::抽選・予約応募受付中のストア::ドラゴンスター通販::ポケモンカード メガブレイブ ポケモンカード メガシンフォニア": [
-      "明日締切"
-    ],
     "nyuka_now::抽選・予約応募受付中のストア::ジョーシン（アプリ）::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": [
-      "明日締切"
+      "明日締切",
+      "本日締切"
     ],
     "nyuka_now::抽選・予約応募受付中のストア::キッズリパブリック（アプリ）::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": [
-      "明日締切"
+      "明日締切",
+      "本日締切"
     ],
     "nyuka_now::抽選・予約応募受付中のストア::ポケモンカードラウンジ渋谷店::ポケモンカード スタートデッキ100 バトルコレクション": [
-      "明日締切"
+      "明日締切",
+      "本日締切"
     ]
   }
 }
