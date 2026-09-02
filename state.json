@@ -1,5 +1,33 @@
 {
   "nyuka_now": {
+    "抽選・予約応募受付中のストア::イトーヨーカドーネット通販::ポケモンカード 30th CELEBRATION BOX": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "イトーヨーカドーネット通販",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "店頭抽選受付（当選者には店頭販売）",
+        "開始日": "9月2日(水)12:00",
+        "終了日": "9月3日(木)23:59",
+        "当選発表": "9月16日(水) 11:00",
+        "詳細ページ": "イトーヨーカドーネット通販の詳細ページ",
+        "詳細ページ_url": "https://iyec.itoyokado.co.jp/shop/pages/apply_pomega_04.aspx"
+      }
+    },
+    "抽選・予約応募受付中のストア::ファミマオンライン::ポケモンカード 30th CELEBRATION BOX": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "ファミマオンライン",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "WEB抽選受付",
+        "開始日": "9月2日(水)10:00",
+        "終了日": "9月10日(木)23:59",
+        "当選発表": "9/14(月)",
+        "応募ページ": "ファミマオンラインの応募ページ",
+        "応募ページ_url": "https://famima-online.family.co.jp/item?itemCode=100162480879693930"
+      }
+    },
     "抽選・予約応募受付中のストア::古本市場::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
       "section": "抽選・予約応募受付中のストア",
       "store": "古本市場",
@@ -225,6 +253,20 @@
         "応募ページ": "イオンスタイルオンラインの応募ページ",
         "応募ページ_url": "https://aeonretail.com/Page/k-lottery_pokemon_set.aspx"
       }
+    },
+    "近日受付開始予定のストア::キデイランド各店::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
+      "section": "近日受付開始予定のストア",
+      "store": "キデイランド各店",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
+        "開始日": "9月5日(土)10:00",
+        "終了日": "9月7日(月)23:59",
+        "当選発表": "9月14日 18:00頃までに連絡",
+        "詳細ページ": "キデイランド各店の詳細ページ",
+        "詳細ページ_url": "https://livepocket.jp/p/hpmzs"
+      }
     }
   },
   "pokecawatch": {
@@ -363,6 +405,9 @@
       "明日締切"
     ],
     "nyuka_now::抽選・予約応募受付中のストア::平和堂::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": [
+      "明日締切"
+    ],
+    "nyuka_now::抽選・予約応募受付中のストア::イトーヨーカドーネット通販::ポケモンカード 30th CELEBRATION BOX": [
       "明日締切"
     ]
   }
