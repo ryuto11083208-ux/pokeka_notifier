@@ -1,5 +1,19 @@
 {
   "nyuka_now": {
+    "抽選・予約応募受付中のストア::晴れる屋2各店::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "晴れる屋2各店",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
+        "開始日": "9月4日(金)12:00",
+        "終了日": "9月12日(土)23:59",
+        "当選発表": "9/13",
+        "詳細ページ": "BOX デッキセット",
+        "詳細ページ_url": "https://livepocket.jp/e/j2bxm"
+      }
+    },
     "抽選・予約応募受付中のストア::Bee本舗::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
       "section": "抽選・予約応募受付中のストア",
       "store": "Bee本舗",
@@ -53,17 +67,6 @@
         "応募条件": "・ポイント共有手続き済みのお宝創庫グループアプリ会員のお客様 ・過去1年以内にお宝創庫グループ店舗にて会員証を提示頂いて売買利用した履歴があるお客様",
         "詳細ページ": "お宝創庫・プレイズの詳細ページ",
         "詳細ページ_url": "https://www.otakarasouko.com/information/98653419/#gsc.tab=0"
-      }
-    },
-    "抽選・予約応募受付中のストア::ミニストップオンライン::ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "ミニストップオンライン",
-      "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
-        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
-        "当選発表": "9月14日(月)15時00分",
-        "応募ページ": "ミニストップオンラインの応募ページ",
-        "応募ページ_url": "https://online.ministop.co.jp/Page/pockemon.aspx"
       }
     },
     "抽選・予約応募受付中のストア::ファミマオンライン::ポケモンカード 30th CELEBRATION BOX": {
@@ -233,12 +236,11 @@
         "詳細ページ_url": "https://livepocket.jp/p/hpmzs"
       }
     },
-    "近日受付開始予定のストア::ポケモンセンターオンライン::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー ポケモンカード 30th CELEBRATION カードセット各種": {
+    "近日受付開始予定のストア::ポケモンセンターオンライン::ポケモンカード 30th CELEBRATION BOX / 30th CELEBRATION カードセット各種 / 30th CELEBRATION FUTURISTIC BOX": {
       "section": "近日受付開始予定のストア",
       "store": "ポケモンセンターオンライン",
       "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー ポケモンカード 30th CELEBRATION カードセット各種",
-        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX / 30th CELEBRATION カードセット各種 / 30th CELEBRATION FUTURISTIC BOX",
         "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
         "開始日": "9月11日(金)16:00",
         "終了日": "9月16日(水)16:59",
