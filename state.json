@@ -98,6 +98,20 @@
         "応募ページ_url": "https://famima-online.family.co.jp/item?itemCode=100162480879693930"
       }
     },
+    "抽選・予約応募受付中のストア::キデイランド各店::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "キデイランド各店",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
+        "開始日": "9月5日(土)10:00",
+        "終了日": "9月7日(月)23:59",
+        "当選発表": "9月14日 18:00頃までに連絡",
+        "詳細ページ": "キデイランド各店の詳細ページ",
+        "詳細ページ_url": "https://livepocket.jp/p/hpmzs"
+      }
+    },
     "抽選・予約応募受付中のストア::古本市場::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
       "section": "抽選・予約応募受付中のストア",
       "store": "古本市場",
@@ -208,20 +222,6 @@
         "応募条件": "明日6月2日(火)14時商品ページ公開 招待制販売の可能性が高いです。",
         "詳細ページ": "Amazonの詳細ページ",
         "詳細ページ_url": "https://www.amazon.co.jp/dp/B0GXCRBL5J?m=AN1VRQENFRJN&aod=1&tag=nnowapp-22"
-      }
-    },
-    "近日受付開始予定のストア::キデイランド各店::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
-      "section": "近日受付開始予定のストア",
-      "store": "キデイランド各店",
-      "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
-        "対象商品_url": "https://nyuka-now.com/archives/159770",
-        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
-        "開始日": "9月5日(土)10:00",
-        "終了日": "9月7日(月)23:59",
-        "当選発表": "9月14日 18:00頃までに連絡",
-        "詳細ページ": "キデイランド各店の詳細ページ",
-        "詳細ページ_url": "https://livepocket.jp/p/hpmzs"
       }
     },
     "近日受付開始予定のストア::ポケモンセンターオンライン::ポケモンカード 30th CELEBRATION BOX / 30th CELEBRATION カードセット各種 / 30th CELEBRATION FUTURISTIC BOX": {
