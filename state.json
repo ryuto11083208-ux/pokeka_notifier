@@ -1,5 +1,17 @@
 {
   "nyuka_now": {
+    "抽選・予約応募受付中のストア::しまむらパーク::ポケモンカード 30th CELEBRATION BOX ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー ポケモンカード メガシンフォニア": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "しまむらパーク",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード ストームエメラルダ ポケモンカード メガブレイブ ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー ポケモンカード メガシンフォニア",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "アプリ抽選受付（当選者にはオンライン販売）",
+        "当選発表": "9/14(月)予定",
+        "応募ページ": "しまむらパークの応募ページ",
+        "応募ページ_url": "https://www.shop-shimamura.com/disp/itemlist/?pre_rsv_icon=1&sortKey=02&srsltid=AfmBOopV74YgISxrKImEluSjXybHlKA7tuwaINbqpdlEuwFl2eA7BncE"
+      }
+    },
     "抽選・予約応募受付中のストア::ゲームアーク / 宝島各店::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
       "section": "抽選・予約応募受付中のストア",
       "store": "ゲームアーク / 宝島各店",
