@@ -222,7 +222,8 @@
   },
   "reminders_sent": {
     "nyuka_now::抽選・予約応募受付中のストア::ポケモンセンターオンライン::ポケモンカード 30th CELEBRATION BOX / 30th CELEBRATION カードセット各種 / 30th CELEBRATION FUTURISTIC BOX": [
-      "明日締切"
+      "明日締切",
+      "本日締切"
     ]
   }
 }
