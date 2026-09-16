@@ -64,19 +64,6 @@
         "応募ページ_url": "https://www.30th.pokemon-card.com/event/30thevent/entry"
       }
     },
-    "抽選・予約応募受付中のストア::ポケモンセンターオンライン::ポケモンカード 30th CELEBRATION BOX / 30th CELEBRATION カードセット各種 / 30th CELEBRATION FUTURISTIC BOX": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "ポケモンセンターオンライン",
-      "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION BOX / 30th CELEBRATION カードセット各種 / 30th CELEBRATION FUTURISTIC BOX",
-        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
-        "開始日": "9月11日(金)16:00",
-        "終了日": "9月16日(水)16:59",
-        "当選発表": "9/30",
-        "応募ページ": "ポケモンセンターオンラインの応募ページ",
-        "応募ページ_url": "https://www.pokemoncenter-online.com/lottery/landing-page.html"
-      }
-    },
     "抽選・予約応募受付中のストア::Amazon::ポケモンカードゲーム MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー / カードセット9種": {
       "section": "抽選・予約応募受付中のストア",
       "store": "Amazon",
@@ -221,9 +208,8 @@
     }
   },
   "reminders_sent": {
-    "nyuka_now::抽選・予約応募受付中のストア::ポケモンセンターオンライン::ポケモンカード 30th CELEBRATION BOX / 30th CELEBRATION カードセット各種 / 30th CELEBRATION FUTURISTIC BOX": [
-      "明日締切",
-      "本日締切"
+    "nyuka_now::抽選・予約応募受付中のストア::ポケモンカードゲーム公式::ポケモンカードゲーム30周年記念イベント 『30th CELEBRATION EVENT』": [
+      "明日締切"
     ]
   }
 }
