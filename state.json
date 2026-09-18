@@ -40,6 +40,18 @@
         "応募ページ_url": "https://docs.google.com/forms/d/e/1FAIpQLSdMX-h7obyLG4eRExlnA1HCvcy3sZuT29hmXyLE2oTMm1OrpQ/viewform"
       }
     },
+    "抽選・予約応募受付中のストア::ホビーサーチ::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "ホビーサーチ",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
+        "開始日": "9月18日(金)21:00",
+        "応募ページ": "拡張パック デッキセット",
+        "応募ページ_url": "https://px.a8.net/svt/ejp?a8mat=3T0595+G2QVU+24JA+BW8O2&a8ejpredirect=https%3A%2F%2Fwww.1999.co.jp%2F11371442"
+      }
+    },
     "抽選・予約応募受付中のストア::しまむらパーク::ポケモンカードMEGA スペシャルカードセット メガエルレイドex ポケモンカード アビスアイ ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）": {
       "section": "抽選・予約応募受付中のストア",
       "store": "しまむらパーク",
@@ -104,19 +116,6 @@
         "詳細ページ_url": "https://docs.google.com/forms/d/e/1FAIpQLSe2tm0oG-L8fBGGdkqdWNJD2NRkl7IHSWxGKKcFoU_u0-K1Ow/viewform"
       }
     },
-    "抽選・予約応募受付中のストア::ポケモンカードゲーム公式::ポケモンカードゲーム30周年記念イベント 『30th CELEBRATION EVENT』": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "ポケモンカードゲーム公式",
-      "data": {
-        "対象商品": "ポケモンカードゲーム30周年記念イベント 『30th CELEBRATION EVENT』",
-        "抽選形式": "WEB抽選受付",
-        "開始日": "9月4日(金)14:00",
-        "終了日": "9月18日(金)12:00",
-        "当選発表": "10/2(金)17:00予定",
-        "応募ページ": "ポケモンカードゲーム公式の応募ページ",
-        "応募ページ_url": "https://www.30th.pokemon-card.com/event/30thevent/entry"
-      }
-    },
     "抽選・予約応募受付中のストア::Amazon::ポケモンカードゲーム MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー / カードセット9種": {
       "section": "抽選・予約応募受付中のストア",
       "store": "Amazon",
@@ -141,18 +140,6 @@
         "応募条件": "明日6月2日(火)14時商品ページ公開 招待制販売の可能性が高いです。",
         "詳細ページ": "Amazonの詳細ページ",
         "詳細ページ_url": "https://www.amazon.co.jp/dp/B0GXCRBL5J?m=AN1VRQENFRJN&aod=1&tag=nnowapp-22"
-      }
-    },
-    "近日受付開始予定のストア::ホビーサーチ::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
-      "section": "近日受付開始予定のストア",
-      "store": "ホビーサーチ",
-      "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
-        "対象商品_url": "https://nyuka-now.com/archives/159770",
-        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
-        "開始日": "9月18日(金)21:00",
-        "応募ページ": "拡張パック デッキセット",
-        "応募ページ_url": "https://px.a8.net/svt/ejp?a8mat=3T0595+G2QVU+24JA+BW8O2&a8ejpredirect=https%3A%2F%2Fwww.1999.co.jp%2F11371442"
       }
     },
     "近日受付開始予定のストア::ゲオ::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION カードセット各種": {
@@ -300,9 +287,8 @@
     }
   },
   "reminders_sent": {
-    "nyuka_now::抽選・予約応募受付中のストア::ポケモンカードゲーム公式::ポケモンカードゲーム30周年記念イベント 『30th CELEBRATION EVENT』": [
-      "明日締切",
-      "本日締切"
+    "nyuka_now::抽選・予約応募受付中のストア::ポケモンセンター各店::ポケモンカード 拡張パック 30th CELEBRATION（10パック）": [
+      "明日締切"
     ]
   }
 }
