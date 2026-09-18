@@ -154,6 +154,19 @@
         "応募ページ": "拡張パック デッキセット",
         "応募ページ_url": "https://px.a8.net/svt/ejp?a8mat=3T0595+G2QVU+24JA+BW8O2&a8ejpredirect=https%3A%2F%2Fwww.1999.co.jp%2F11371442"
       }
+    },
+    "近日受付開始予定のストア::ゲオ::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION カードセット各種": {
+      "section": "近日受付開始予定のストア",
+      "store": "ゲオ",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION カードセット各種",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
+        "開始日": "9月28日(月)11:00",
+        "終了日": "10月1日(木)17:59",
+        "詳細ページ": "BOX カードセット",
+        "詳細ページ_url": "https://geo-online.co.jp/news/785"
+      }
     }
   },
   "pokecawatch": {
