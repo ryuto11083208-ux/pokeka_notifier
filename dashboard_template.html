@@ -108,6 +108,23 @@
   }
   .card.done .check { background: var(--green-bg); color: var(--green); border-color: var(--green); }
 
+  .ev { background: var(--gray-bg); border-radius: 12px; padding: 10px 12px; font-size: .85rem; color: var(--sub); }
+  .ev .big { font-size: 1.25rem; font-weight: 800; color: var(--text); }
+  .ev.plus { background: var(--green-bg); } .ev.plus .big { color: var(--green); }
+  .ev.minus .big { color: var(--sub); }
+  .ev .row { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .ev a { color: inherit; }
+  .up { color: var(--green); } .down { color: var(--red); }
+  .result { display: flex; gap: 6px; }
+  .result button { flex: 1; padding: 7px; border-radius: 10px; border: 1px solid var(--line); background: transparent; color: var(--text); font: inherit; font-size: .85rem; cursor: pointer; }
+  .result button.on { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .panel { background: var(--card); border-radius: 14px; padding: 12px 16px; margin-bottom: 14px; color: var(--text); }
+  .panel summary { font-weight: 700; cursor: pointer; }
+  .panel label { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 10px 0; font-size: .9rem; }
+  .panel input { width: 110px; padding: 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--text); font: inherit; text-align: right; }
+  .panel table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-top: 8px; }
+  .panel td, .panel th { padding: 6px 4px; border-bottom: 1px solid var(--line); text-align: left; }
+  .panel p { color: var(--sub); font-size: .8rem; margin: 8px 0 0; }
   .news a { display: block; background: var(--card); padding: 10px 14px; border-radius: 12px; margin-bottom: 8px; color: var(--text); text-decoration: none; }
   .empty { color: var(--sub); padding: 30px; text-align: center; }
 
@@ -133,7 +150,18 @@
     <button class="chip" data-method="web">WEB応募だけ</button>
     <button class="chip" data-method="store">店頭だけ</button>
     <button class="chip" id="hideDone">応募済みを隠す</button>
+    <button class="chip" id="sortEv">💰 期待値が高い順</button>
   </div>
+
+  <details class="panel" id="panel">
+    <summary>📊 当選の記録と、期待値の計算設定</summary>
+    <div id="stats"></div>
+    <label>売るときの手数料（%）<input type="number" id="fee" min="0" max="50" step="0.5"></label>
+    <label>送料・梱包代（円）<input type="number" id="ship" min="0" step="100"></label>
+    <p>期待値 ＝ 当選率 ×（相場 − 手数料 − 送料 − 定価）。相場と定価はスニダンの値です。
+      当選率は抽選の種類ごとの目安で、あなたの記録が10回以上たまると、その実績の当選率に切り替わります。
+      記録と設定は、この端末の中だけに保存されます。</p>
+  </details>
 
   <div id="errors"></div>
   <div id="list"></div>
@@ -156,8 +184,54 @@ let store = {};
 try { store = JSON.parse(localStorage.getItem("pokeka-done") || "{}"); } catch (e) {}
 const saveStore = () => { try { localStorage.setItem("pokeka-done", JSON.stringify(store)); } catch (e) {} };
 
+// 当選・落選の記録 { id: { r: "win"|"lose", t: 抽選の種類, ts } }
+let results = {};
+try { results = JSON.parse(localStorage.getItem("board-results") || "{}"); } catch (e) {}
+const saveResults = () => { try { localStorage.setItem("board-results", JSON.stringify(results)); } catch (e) {} };
+
+let settings = { fee: 10, ship: 1000 };
+try { Object.assign(settings, JSON.parse(localStorage.getItem("board-settings") || "{}")); } catch (e) {}
+const saveSettings = () => { try { localStorage.setItem("board-settings", JSON.stringify(settings)); } catch (e) {} };
+
+const yen = n => (n < 0 ? "−¥" : "¥") + Math.abs(Math.round(n)).toLocaleString();
+const signedYen = n => (n >= 0 ? "+" : "") + yen(n);
+
+// 抽選の種類（当選率の記録をまとめる単位）
+function rateType(item) {
+  const m = item.method || "";
+  if (m.includes("招待")) return "招待制";
+  if (m.includes("先着")) return "先着";
+  if (m.includes("店頭")) return "店頭抽選";
+  return "WEB抽選";
+}
+
+function myRate(type) {
+  const rs = Object.values(results).filter(r => r.t === type);
+  const wins = rs.filter(r => r.r === "win").length;
+  return { n: rs.length, wins, rate: rs.length ? wins / rs.length : null };
+}
+
+function calcEv(item) {
+  if (!item.market || !item.retail) return null;
+  const mine = myRate(rateType(item));
+  const useMine = mine.n >= 10;
+  const rate = useMine ? mine.rate : item.winRate;
+  const profit = item.market.price * (1 - settings.fee / 100) - settings.ship - item.retail;
+  return { profit, rate, ev: rate * profit, useMine, mine };
+}
+
+// 7日間の相場の変化
+function trend(item) {
+  const h = item.priceHistory || [];
+  if (h.length < 2) return null;
+  const weekAgo = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
+  const base = h.find(([d]) => d >= weekAgo) || h[0];
+  const diff = h[h.length - 1][1] - base[1];
+  return diff === 0 ? null : diff;
+}
+
 const CATS = [["トレカ", "🎴"], ["スニーカー", "👟"], ["ホビー", "🤖"]];
-const state = { q: "", method: null, hideDone: false, only: null, game: null, cat: "トレカ" };
+const state = { q: "", method: null, hideDone: false, only: null, game: null, cat: "トレカ", sortEv: false };
 try {
   state.cat = localStorage.getItem("board-cat") || "トレカ";
   state.game = localStorage.getItem("tcg-game") || null;
@@ -228,6 +302,8 @@ function card(item) {
   tags.append(el("span", "tag", item.source));
   c.append(tags);
 
+  c.append(evBox(item));
+
   if (item.condition) {
     const det = el("details");
     det.append(el("summary", null, "応募条件を見る"), el("p", null, item.condition));
@@ -244,7 +320,62 @@ function card(item) {
   };
   actions.append(go, chk);
   c.append(actions);
+
+  if (done) {
+    const res = el("div", "result");
+    [["win", "🎉 当選した"], ["lose", "落選した"]].forEach(([key, label]) => {
+      const b = el("button", results[item.id] && results[item.id].r === key ? "on" : "", label);
+      b.onclick = () => {
+        if (results[item.id] && results[item.id].r === key) delete results[item.id];
+        else results[item.id] = { r: key, t: rateType(item), ts: Date.now() };
+        saveResults(); render();
+      };
+      res.append(b);
+    });
+    c.append(res);
+  }
   return c;
+}
+
+function evBox(item) {
+  const e = calcEv(item);
+  if (!e) return el("div", "ev", "💰 相場データなし（期待値は計算できません）");
+  const box = el("div", "ev " + (e.ev > 0 ? "plus" : "minus"));
+  const head = el("div", "row");
+  head.append(el("span", "big", `💰 期待値 ${signedYen(e.ev)}`), el("span", null, "／1回の応募"));
+  box.append(head);
+  box.append(el("div", null,
+    `当選すると ${signedYen(e.profit)}（定価${yen(item.retail)} → 相場${yen(item.market.price)}）`));
+  const foot = el("div", "row");
+  foot.append(el("span", null, e.useMine
+    ? `当選率 ${(e.rate * 100).toFixed(1)}%（あなたの実績 ${e.mine.wins}/${e.mine.n}）`
+    : `当選率の目安 ${Math.round(item.winRate * 100)}%（${item.winRateReason}）`));
+  const t = trend(item);
+  if (t) foot.append(el("span", t > 0 ? "up" : "down", `相場 ${t > 0 ? "↑" : "↓"}${yen(Math.abs(t))}（7日間）`));
+  box.append(foot);
+  const link = el("a", null, `スニダン「${item.market.name}」`);
+  link.href = item.market.url; link.target = "_blank"; link.rel = "noopener";
+  const src = el("div");
+  src.append("相場: ", link);
+  box.append(src);
+  return box;
+}
+
+function renderStats() {
+  const box = document.getElementById("stats");
+  box.innerHTML = "";
+  const table = el("table");
+  const head = el("tr");
+  ["抽選の種類", "記録", "当選", "あなたの当選率"].forEach(t => head.append(el("th", null, t)));
+  table.append(head);
+  ["WEB抽選", "店頭抽選", "招待制", "先着"].forEach(type => {
+    const m = myRate(type);
+    const tr = el("tr");
+    const rateText = m.n ? `${(m.rate * 100).toFixed(1)}%${m.n < 10 ? `（あと${10 - m.n}回で計算に使用）` : ""}` : "−";
+    [type, `${m.n}回`, `${m.wins}回`, rateText].forEach(t => tr.append(el("td", null, t)));
+    table.append(tr);
+  });
+  box.append(table);
 }
 
 function matches(item) {
@@ -296,6 +427,7 @@ function renderCats() {
 function render() {
   renderCats();
   renderGames();
+  renderStats();
   document.getElementById("news").hidden = state.cat !== "トレカ";  // ポケカのニュースはトレカの時だけ
   const items = DATA.items.filter(matches);
 
@@ -314,6 +446,8 @@ function render() {
   SECTIONS.forEach(s => {
     if (state.only && state.only !== s.key) return;
     const group = items.filter(i => i.status === s.key);
+    const evOf = i => (calcEv(i) || { ev: -Infinity }).ev;
+    if (state.sortEv) group.sort((a, b) => evOf(b) - evOf(a));
     if (!group.length) return;
     shown += group.length;
     const sec = el("section");
@@ -352,6 +486,16 @@ function init() {
     state.method = state.method === b.dataset.method ? null : b.dataset.method;
     document.querySelectorAll("[data-method]").forEach(x => x.classList.toggle("on", x.dataset.method === state.method));
     render();
+  });
+  const se = document.getElementById("sortEv");
+  se.onclick = () => { state.sortEv = !state.sortEv; se.classList.toggle("on", state.sortEv); render(); };
+  ["fee", "ship"].forEach(k => {
+    const input = document.getElementById(k);
+    input.value = settings[k];
+    input.addEventListener("change", () => {
+      const v = parseFloat(input.value);
+      if (!isNaN(v) && v >= 0) { settings[k] = v; saveSettings(); render(); }
+    });
   });
   const hd = document.getElementById("hideDone");
   hd.onclick = () => { state.hideDone = !state.hideDone; hd.classList.toggle("on", state.hideDone); render(); };

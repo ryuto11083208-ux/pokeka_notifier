@@ -10,6 +10,7 @@ on:
       - "dashboard.py"
       - "dashboard_template.html"
       - "main.py"
+      - "pricing.py"
       - ".github/workflows/board.yml"
 
 permissions:
@@ -36,6 +37,13 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      # 相場の記録（値動き）を次の実行に引き継ぐ
+      - uses: actions/cache@v4
+        with:
+          path: price_cache.json
+          key: price-cache-${{ github.run_id }}
+          restore-keys: price-cache-
 
       - name: Build board page
         env:

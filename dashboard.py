@@ -16,6 +16,7 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
+from pricing import attach_prices
 from main import JST, fetch_gamepedia_entries, fetch_nyuka_now_entries, fetch_pokecawatch_entries
 
 # DASHBOARD_OUT で書き出し先を変えられる（GitHub Actions 用）
@@ -60,6 +61,8 @@ NYUKA_PAGES = [
 
 SNEAKERWARS_TOP = "https://sneakerwars.jp/"
 SNEAKERWARS_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; LotteryBoard/1.0)"}
+# 品番（例: IQ5495-005 / KH6730 / U9835DU）
+STYLE_CODE = re.compile(r"([A-Z]{1,3}\d{3,5}-\d{3}|[A-Z]{2}\d{4}|U\d{4}[A-Z0-9]{2,3})")
 SNEAKER_BRANDS = [
     ("ジョーダン", "ナイキ"), ("ナイキ", "ナイキ"), ("アディダス", "アディダス"),
     ("ニューバランス", "ニューバランス"), ("アシックス", "アシックス"), ("コンバース", "コンバース"),
@@ -173,6 +176,9 @@ def fetch_sneakerwars(now):
         except requests.RequestException as e:
             print(f"スニーカーウォーズ {item_id} 取得エラー: {e}", file=sys.stderr)
             continue
+        page_text = page.get_text(" ")
+        code = STYLE_CODE.search(page_text)
+        retail = re.search(r"国内価格.{0,200}?([\d,]{4,})\s*円", page_text, re.S)
         box = page.find(id="releasedata")
         for row in box.select("li") if box else []:
             shop, info = row.select_one(".font-releaseshop"), row.select_one(".font-online")
@@ -194,6 +200,8 @@ def fetch_sneakerwars(now):
                 "upcoming_section": False,
                 "category": "スニーカー",
                 "game": sneaker_brand(name),
+                "style_code": code.group(1) if code else None,
+                "retail": int(retail.group(1).replace(",", "")) if retail else None,
             })
     return items
 
@@ -266,6 +274,11 @@ def build_items(now):
         items.append(item)
 
     items.sort(key=lambda i: (i["end"] is None, i["end"] or "", i["shop"]))
+    try:
+        attach_prices(items, now)
+    except Exception as e:  # 相場が取れなくても一覧は出す
+        errors.append(f"相場の取得に失敗しました（{e.__class__.__name__}）")
+        print(f"相場取得エラー: {e}", file=sys.stderr)
     return items, errors
 
 
