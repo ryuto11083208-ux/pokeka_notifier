@@ -40,8 +40,8 @@ GAMEPEDIA_FIELD_ORDER = [
 ]
 
 
-def fetch_nyuka_now_entries():
-    resp = requests.get(NYUKA_NOW_URL, headers=HEADERS, timeout=30)
+def fetch_nyuka_now_entries(url=None):
+    resp = requests.get(url or NYUKA_NOW_URL, headers=HEADERS, timeout=30)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.content, "html5lib")
 

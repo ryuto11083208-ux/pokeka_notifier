@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1d2330">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="トレカ抽選">
+<title>トレカ抽選ボード</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f5f7; --card: #ffffff; --text: #1d2330; --sub: #6b7280; --line: #e5e7eb;
+    --red: #e5484d; --red-bg: #fdecec; --orange: #e8830c; --orange-bg: #fff3e0;
+    --green: #1f9d55; --green-bg: #e6f6ec; --blue: #2f6fdb; --blue-bg: #e8f0fd;
+    --gray-bg: #eef0f3; --btn: #1d2330; --btn-text: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151b; --card: #1c2029; --text: #eef0f4; --sub: #9aa3b2; --line: #2b313d;
+      --red: #ff6b6f; --red-bg: #3a1d20; --orange: #ffa94d; --orange-bg: #3a2a16;
+      --green: #4cc98a; --green-bg: #173226; --blue: #74a4ff; --blue-bg: #1b2a45;
+      --gray-bg: #262b36; --btn: #eef0f4; --btn-text: #12151b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "M PLUS Rounded 1c", "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    font-weight: 500; line-height: 1.5;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 20px 16px 60px; }
+  header h1 { font-size: 1.6rem; margin: 0; font-weight: 800; }
+  .updated { color: var(--sub); font-size: .9rem; margin-top: 2px; }
+
+  .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 18px 0; }
+  .sum {
+    background: var(--card); border-radius: 14px; padding: 12px 14px; cursor: pointer;
+    border: 2px solid transparent; text-align: left; font: inherit; color: inherit;
+  }
+  .sum.active { border-color: var(--text); }
+  .sum .n { font-size: 1.8rem; font-weight: 800; line-height: 1.1; }
+  .sum .l { font-size: .85rem; color: var(--sub); }
+  .sum.today .n { color: var(--red); } .sum.tomorrow .n { color: var(--orange); }
+  .sum.open .n { color: var(--green); } .sum.soon .n { color: var(--blue); }
+
+  .tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 18px; }
+  .tools input[type=search] {
+    flex: 1 1 220px; padding: 11px 14px; border-radius: 12px; border: 1px solid var(--line);
+    background: var(--card); color: var(--text); font: inherit;
+  }
+  .chip {
+    padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card);
+    color: var(--text); font: inherit; font-size: .9rem; cursor: pointer;
+  }
+  .chip.on { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .games { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 12px; scrollbar-width: none; }
+  .games .chip { flex: none; }
+  .games .chip small { opacity: .7; margin-left: 4px; }
+  .game { font-size: .75rem; font-weight: 700; background: var(--blue-bg); color: var(--blue); padding: 2px 8px; border-radius: 6px; margin-right: 6px; }
+
+  .errors { background: var(--orange-bg); color: var(--orange); padding: 10px 14px; border-radius: 12px; margin-bottom: 14px; }
+
+  section h2 { font-size: 1.15rem; margin: 26px 0 10px; display: flex; align-items: center; gap: 8px; }
+  section h2 .count { color: var(--sub); font-weight: 500; font-size: .95rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 12px; }
+
+  .card {
+    background: var(--card); border-radius: 16px; padding: 14px 16px 16px; display: flex; flex-direction: column;
+    gap: 8px; border-left: 6px solid var(--line); transition: opacity .2s;
+  }
+  .card.today { border-left-color: var(--red); } .card.tomorrow { border-left-color: var(--orange); }
+  .card.open { border-left-color: var(--green); } .card.soon { border-left-color: var(--blue); }
+  .card.done { opacity: .45; }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .shop { font-weight: 800; font-size: 1.05rem; }
+  .badge { font-size: .8rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+  .badge.today { background: var(--red-bg); color: var(--red); }
+  .badge.tomorrow { background: var(--orange-bg); color: var(--orange); }
+  .badge.open { background: var(--green-bg); color: var(--green); }
+  .badge.soon { background: var(--blue-bg); color: var(--blue); }
+  .badge.unknown { background: var(--gray-bg); color: var(--sub); }
+  .product { font-size: .95rem; }
+  .period { font-size: .9rem; color: var(--sub); }
+  .period b { color: var(--text); }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag { font-size: .75rem; background: var(--gray-bg); color: var(--sub); padding: 2px 8px; border-radius: 6px; }
+  details { font-size: .85rem; color: var(--sub); }
+  details summary { cursor: pointer; }
+  details p { margin: 6px 0 0; white-space: pre-wrap; word-break: break-all; }
+  .actions { display: flex; gap: 8px; margin-top: auto; padding-top: 4px; }
+  .go {
+    flex: 1; text-align: center; background: var(--btn); color: var(--btn-text); text-decoration: none;
+    font-weight: 700; padding: 10px; border-radius: 10px;
+  }
+  .go.disabled { background: var(--gray-bg); color: var(--sub); pointer-events: none; }
+  .check {
+    padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: transparent;
+    color: var(--text); font: inherit; font-size: .85rem; cursor: pointer; white-space: nowrap;
+  }
+  .card.done .check { background: var(--green-bg); color: var(--green); border-color: var(--green); }
+
+  .news a { display: block; background: var(--card); padding: 10px 14px; border-radius: 12px; margin-bottom: 8px; color: var(--text); text-decoration: none; }
+  .empty { color: var(--sub); padding: 30px; text-align: center; }
+
+  @media (max-width: 600px) {
+    .summary { grid-template-columns: repeat(2, 1fr); }
+    header h1 { font-size: 1.35rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🎴 トレカ抽選ボード</h1>
+    <div class="updated" id="updated"></div>
+  </header>
+
+  <div class="summary" id="summary"></div>
+
+  <div class="games" id="games"></div>
+  <div class="tools">
+    <input type="search" id="q" placeholder="🔍 商品名・お店で探す（例：アビスアイ、ゲオ）">
+    <button class="chip" data-method="web">WEB応募だけ</button>
+    <button class="chip" data-method="store">店頭だけ</button>
+    <button class="chip" id="hideDone">応募済みを隠す</button>
+  </div>
+
+  <div id="errors"></div>
+  <div id="list"></div>
+  <section class="news" id="news"></section>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+const SECTIONS = [
+  { key: "today",    title: "🔥 今日まで",   label: "今日しめきり" },
+  { key: "tomorrow", title: "⏰ 明日まで",   label: "明日しめきり" },
+  { key: "open",     title: "✅ 受付中",     label: "受付中" },
+  { key: "soon",     title: "🔜 これから始まる", label: "これから" },
+  { key: "unknown",  title: "♾️ 期限なし（招待制・先着など）", label: "期限なし" },
+];
+const WEEK = "日月火水木金土";
+
+let store = {};
+try { store = JSON.parse(localStorage.getItem("pokeka-done") || "{}"); } catch (e) {}
+const saveStore = () => { try { localStorage.setItem("pokeka-done", JSON.stringify(store)); } catch (e) {} };
+
+const state = { q: "", method: null, hideDone: false, only: null, game: null };
+try { state.game = localStorage.getItem("tcg-game") || null; } catch (e) {}
+
+function fmt(iso) {
+  if (!iso) return "?";
+  const d = new Date(iso);
+  const hm = `${d.getHours()}:${String(d.getMinutes()).padStart(2, "0")}`;
+  return `${d.getMonth() + 1}/${d.getDate()}(${WEEK[d.getDay()]}) ${hm}`;
+}
+
+function remaining(item) {
+  const now = new Date();
+  if (item.status === "soon" && item.start) {
+    return "開始まで " + span(new Date(item.start) - now);
+  }
+  if (!item.end) return "期限なし";
+  const ms = new Date(item.end) - now;
+  if (ms <= 0) return "終了";
+  return "あと " + span(ms);
+}
+function span(ms) {
+  const m = Math.floor(ms / 60000), h = Math.floor(m / 60), d = Math.floor(h / 24);
+  if (d >= 1) return `${d}日${h % 24}時間`;
+  if (h >= 1) return `${h}時間${m % 60}分`;
+  return `${m}分`;
+}
+
+function methodType(item) {
+  const m = item.method || "";
+  if (m.includes("店頭抽選")) return "store";
+  if (m.includes("店頭")) return "store";
+  if (m.includes("WEB") || m.includes("オンライン") || m.includes("抽選") || m.includes("招待")) return "web";
+  return "other";
+}
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+function card(item) {
+  const done = !!store[item.id];
+  const c = el("article", `card ${item.status}${done ? " done" : ""}`);
+
+  const top = el("div", "top");
+  top.append(el("div", "shop", item.shop), el("span", `badge ${item.status}`, remaining(item)));
+  c.append(top);
+
+  const product = el("div", "product");
+  item.games.forEach(g => product.append(el("span", "game", g)));
+  product.append(document.createTextNode(item.product));
+  c.append(product);
+
+  const period = el("div", "period");
+  period.innerHTML = "📅 ";
+  period.append(document.createTextNode(`${fmt(item.start)} 〜 `));
+  period.append(el("b", null, fmt(item.end)));
+  c.append(period);
+
+  const tags = el("div", "tags");
+  if (item.method) tags.append(el("span", "tag", item.method));
+  if (item.announce) tags.append(el("span", "tag", "発表: " + item.announce.slice(0, 30)));
+  tags.append(el("span", "tag", item.source));
+  c.append(tags);
+
+  if (item.condition) {
+    const det = el("details");
+    det.append(el("summary", null, "応募条件を見る"), el("p", null, item.condition));
+    c.append(det);
+  }
+
+  const actions = el("div", "actions");
+  const go = el("a", "go" + (item.url ? "" : " disabled"), item.url ? "応募ページを開く ↗" : "リンクなし");
+  if (item.url) { go.href = item.url; go.target = "_blank"; go.rel = "noopener"; }
+  const chk = el("button", "check", done ? "✔ 応募済み" : "応募した");
+  chk.onclick = () => {
+    if (store[item.id]) delete store[item.id]; else store[item.id] = Date.now();
+    saveStore(); render();
+  };
+  actions.append(go, chk);
+  c.append(actions);
+  return c;
+}
+
+function matches(item) {
+  if (state.game && !item.games.includes(state.game)) return false;
+  if (state.hideDone && store[item.id]) return false;
+  if (state.method && methodType(item) !== state.method) return false;
+  if (state.q) {
+    const hay = (item.shop + " " + item.product).toLowerCase();
+    if (!state.q.toLowerCase().split(/\s+/).every(w => hay.includes(w))) return false;
+  }
+  return true;
+}
+
+function renderGames() {
+  const box = document.getElementById("games");
+  box.innerHTML = "";
+  const counts = {};
+  DATA.items.forEach(i => i.games.forEach(g => counts[g] = (counts[g] || 0) + 1));
+  const games = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+  if (state.game && !counts[state.game]) state.game = null;
+  [[null, "すべて", DATA.items.length], ...games.map(g => [g, g, counts[g]])].forEach(([key, label, n]) => {
+    const b = el("button", "chip" + (state.game === key ? " on" : ""), label);
+    b.append(el("small", null, n));
+    b.onclick = () => {
+      state.game = key;
+      try { key ? localStorage.setItem("tcg-game", key) : localStorage.removeItem("tcg-game"); } catch (e) {}
+      render();
+    };
+    box.append(b);
+  });
+}
+
+function render() {
+  renderGames();
+  const items = DATA.items.filter(matches);
+
+  const sum = document.getElementById("summary");
+  sum.innerHTML = "";
+  SECTIONS.slice(0, 4).forEach(s => {
+    const b = el("button", `sum ${s.key}${state.only === s.key ? " active" : ""}`);
+    b.append(el("div", "n", items.filter(i => i.status === s.key).length), el("div", "l", s.label));
+    b.onclick = () => { state.only = state.only === s.key ? null : s.key; render(); };
+    sum.append(b);
+  });
+
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+  let shown = 0;
+  SECTIONS.forEach(s => {
+    if (state.only && state.only !== s.key) return;
+    const group = items.filter(i => i.status === s.key);
+    if (!group.length) return;
+    shown += group.length;
+    const sec = el("section");
+    const h = el("h2", null, s.title);
+    h.append(el("span", "count", `${group.length}件`));
+    const grid = el("div", "grid");
+    group.forEach(i => grid.append(card(i)));
+    sec.append(h, grid);
+    list.append(sec);
+  });
+  if (!shown) list.append(el("div", "empty", "条件に合う抽選はありません"));
+}
+
+function init() {
+  const gen = new Date(DATA.generatedAt);
+  document.getElementById("updated").textContent =
+    `最終更新：${fmt(DATA.generatedAt)}（${Math.max(0, Math.floor((Date.now() - gen) / 60000))}分前）`;
+
+  if (DATA.errors.length) {
+    const e = document.getElementById("errors");
+    DATA.errors.forEach(msg => e.append(el("div", "errors", "⚠ " + msg)));
+  }
+
+  if (DATA.news.length) {
+    const n = document.getElementById("news");
+    n.append(el("h2", null, "📰 新着ニュース（ポケカウォッチ）"));
+    DATA.news.forEach(a => {
+      const link = el("a", null, a.title);
+      link.href = a.url; link.target = "_blank"; link.rel = "noopener";
+      n.append(link);
+    });
+  }
+
+  document.getElementById("q").addEventListener("input", e => { state.q = e.target.value.trim(); render(); });
+  document.querySelectorAll("[data-method]").forEach(b => b.onclick = () => {
+    state.method = state.method === b.dataset.method ? null : b.dataset.method;
+    document.querySelectorAll("[data-method]").forEach(x => x.classList.toggle("on", x.dataset.method === state.method));
+    render();
+  });
+  const hd = document.getElementById("hideDone");
+  hd.onclick = () => { state.hideDone = !state.hideDone; hd.classList.toggle("on", state.hideDone); render(); };
+
+  // スマホでアプリに戻ってきたとき、10分以上たっていたら最新に読み直す
+  const openedAt = Date.now();
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && Date.now() - openedAt > 10 * 60000) location.reload();
+  });
+
+  render();
+  // 残り時間を1分ごとに更新（応募条件を開いている間は待つ）
+  setInterval(() => { if (!document.querySelector("details[open]")) render(); }, 60000);
+}
+init();
+</script>
+</body>
+</html>
