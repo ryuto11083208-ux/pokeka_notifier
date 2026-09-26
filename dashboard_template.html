@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#1d2330">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="トレカ抽選">
-<title>トレカ抽選ボード</title>
+<meta name="apple-mobile-web-app-title" content="抽選ボード">
+<title>抽選ボード</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
@@ -55,6 +55,13 @@
     color: var(--text); font: inherit; font-size: .9rem; cursor: pointer;
   }
   .chip.on { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; background: var(--card); padding: 6px; border-radius: 14px; margin-top: 16px; }
+  .cats button {
+    border: 0; background: transparent; color: var(--sub); font: inherit; font-weight: 700; font-size: 1rem;
+    padding: 10px 4px; border-radius: 10px; cursor: pointer;
+  }
+  .cats button.on { background: var(--text); color: var(--bg); }
+  .cats small { font-weight: 500; opacity: .75; margin-left: 3px; }
   .games { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 12px; scrollbar-width: none; }
   .games .chip { flex: none; }
   .games .chip small { opacity: .7; margin-left: 4px; }
@@ -113,15 +120,16 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>🎴 トレカ抽選ボード</h1>
+    <h1>🎯 抽選ボード</h1>
     <div class="updated" id="updated"></div>
   </header>
 
+  <nav class="cats" id="cats"></nav>
   <div class="summary" id="summary"></div>
 
   <div class="games" id="games"></div>
   <div class="tools">
-    <input type="search" id="q" placeholder="🔍 商品名・お店で探す（例：アビスアイ、ゲオ）">
+    <input type="search" id="q" placeholder="🔍 商品名・お店で探す（例：アビスアイ、ジョーダン）">
     <button class="chip" data-method="web">WEB応募だけ</button>
     <button class="chip" data-method="store">店頭だけ</button>
     <button class="chip" id="hideDone">応募済みを隠す</button>
@@ -148,8 +156,13 @@ let store = {};
 try { store = JSON.parse(localStorage.getItem("pokeka-done") || "{}"); } catch (e) {}
 const saveStore = () => { try { localStorage.setItem("pokeka-done", JSON.stringify(store)); } catch (e) {} };
 
-const state = { q: "", method: null, hideDone: false, only: null, game: null };
-try { state.game = localStorage.getItem("tcg-game") || null; } catch (e) {}
+const CATS = [["トレカ", "🎴"], ["スニーカー", "👟"], ["ホビー", "🤖"]];
+const state = { q: "", method: null, hideDone: false, only: null, game: null, cat: "トレカ" };
+try {
+  state.cat = localStorage.getItem("board-cat") || "トレカ";
+  state.game = localStorage.getItem("tcg-game") || null;
+} catch (e) {}
+const inCat = () => DATA.items.filter(i => i.category === state.cat);
 
 function fmt(iso) {
   if (!iso) return "?";
@@ -235,6 +248,7 @@ function card(item) {
 }
 
 function matches(item) {
+  if (item.category !== state.cat) return false;
   if (state.game && !item.games.includes(state.game)) return false;
   if (state.hideDone && store[item.id]) return false;
   if (state.method && methodType(item) !== state.method) return false;
@@ -249,10 +263,10 @@ function renderGames() {
   const box = document.getElementById("games");
   box.innerHTML = "";
   const counts = {};
-  DATA.items.forEach(i => i.games.forEach(g => counts[g] = (counts[g] || 0) + 1));
+  inCat().forEach(i => i.games.forEach(g => counts[g] = (counts[g] || 0) + 1));
   const games = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
   if (state.game && !counts[state.game]) state.game = null;
-  [[null, "すべて", DATA.items.length], ...games.map(g => [g, g, counts[g]])].forEach(([key, label, n]) => {
+  [[null, "すべて", inCat().length], ...games.map(g => [g, g, counts[g]])].forEach(([key, label, n]) => {
     const b = el("button", "chip" + (state.game === key ? " on" : ""), label);
     b.append(el("small", null, n));
     b.onclick = () => {
@@ -264,8 +278,25 @@ function renderGames() {
   });
 }
 
+function renderCats() {
+  const box = document.getElementById("cats");
+  box.innerHTML = "";
+  CATS.forEach(([cat, icon]) => {
+    const b = el("button", state.cat === cat ? "on" : "", `${icon} ${cat}`);
+    b.append(el("small", null, DATA.items.filter(i => i.category === cat).length));
+    b.onclick = () => {
+      state.cat = cat; state.game = null; state.only = null;
+      try { localStorage.setItem("board-cat", cat); localStorage.removeItem("tcg-game"); } catch (e) {}
+      render();
+    };
+    box.append(b);
+  });
+}
+
 function render() {
+  renderCats();
   renderGames();
+  document.getElementById("news").hidden = state.cat !== "トレカ";  // ポケカのニュースはトレカの時だけ
   const items = DATA.items.filter(matches);
 
   const sum = document.getElementById("summary");

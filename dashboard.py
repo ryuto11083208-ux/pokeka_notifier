@@ -13,30 +13,57 @@ import webbrowser
 from datetime import datetime, timedelta
 from pathlib import Path
 
+import requests
+from bs4 import BeautifulSoup
+
 from main import JST, fetch_gamepedia_entries, fetch_nyuka_now_entries, fetch_pokecawatch_entries
 
 # DASHBOARD_OUT で書き出し先を変えられる（GitHub Actions 用）
 OUTPUT_FILE = Path(os.environ.get("DASHBOARD_OUT") or Path(__file__).with_name("dashboard.html"))
 TEMPLATE_FILE = Path(__file__).with_name("dashboard_template.html")
 
-# 入荷Nowの「抽選・予約情報まとめ」ページ（トレカの種類, ページURL）
-NYUKA_TCG_PAGES = [
-    ("ポケカ", "https://nyuka-now.com/archives/2459"),
-    ("ワンピース", "https://nyuka-now.com/archives/97393"),
-    ("遊戯王", "https://nyuka-now.com/archives/72605"),
-    ("遊戯王", "https://nyuka-now.com/archives/100529"),  # ラッシュデュエル
-    ("デュエマ", "https://nyuka-now.com/archives/140866"),
-    ("ドラゴンボール", "https://nyuka-now.com/archives/141863"),
-    ("ユニオンアリーナ", "https://nyuka-now.com/archives/134874"),
-    ("ヴァイス", "https://nyuka-now.com/archives/130997"),
-    ("デジモン", "https://nyuka-now.com/archives/141440"),
-    ("ガンダム", "https://nyuka-now.com/archives/145923"),
-    ("hololive", "https://nyuka-now.com/archives/144497"),
-    ("シャドバ", "https://nyuka-now.com/archives/89325"),
-    ("ロルカナ", "https://nyuka-now.com/archives/146927"),
-    ("MTG", "https://nyuka-now.com/archives/152554"),
-    ("ウルトラマン", "https://nyuka-now.com/archives/144495"),
-    ("コナン", "https://nyuka-now.com/archives/143006"),
+# 入荷Nowの「抽選・予約情報まとめ」ページ（カテゴリ, 種類, ページ番号）
+NYUKA_PAGES = [
+    ("トレカ", "ポケカ", 2459),
+    ("トレカ", "ワンピース", 97393),
+    ("トレカ", "遊戯王", 72605),
+    ("トレカ", "遊戯王", 100529),  # ラッシュデュエル
+    ("トレカ", "デュエマ", 140866),
+    ("トレカ", "ドラゴンボール", 141863),
+    ("トレカ", "ユニオンアリーナ", 134874),
+    ("トレカ", "ヴァイス", 130997),
+    ("トレカ", "デジモン", 141440),
+    ("トレカ", "ガンダム", 145923),
+    ("トレカ", "hololive", 144497),
+    ("トレカ", "シャドバ", 89325),
+    ("トレカ", "ロルカナ", 146927),
+    ("トレカ", "MTG", 152554),
+    ("トレカ", "ウルトラマン", 144495),
+    ("トレカ", "コナン", 143006),
+    ("トレカ", "カードダス", 137229),
+    ("スニーカー", "ナイキ", 94961),
+    ("ホビー", "ガンプラ", 17197),
+    ("ホビー", "ガンプラ", 134954),  # 30MM
+    ("ホビー", "ガンプラ", 142273),  # 解体匠機
+    ("ホビー", "ガンプラ", 148800),  # アーセナルベース
+    ("ホビー", "フィギュア", 100970),
+    ("ホビー", "フィギュア", 125879),  # 30MS
+    ("ホビー", "仮面ライダー", 75339),
+    ("ホビー", "ソフビ", 94093),
+    ("ホビー", "LABUBU", 153107),
+    ("ホビー", "amiibo", 110080),
+    ("ホビー", "たまごっち", 147287),
+    ("ホビー", "シール", 156722),
+    ("ホビー", "ウマ娘", 99419),
+    ("ホビー", "ポケモン30周年", 157639),
+]
+
+SNEAKERWARS_TOP = "https://sneakerwars.jp/"
+SNEAKERWARS_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; LotteryBoard/1.0)"}
+SNEAKER_BRANDS = [
+    ("ジョーダン", "ナイキ"), ("ナイキ", "ナイキ"), ("アディダス", "アディダス"),
+    ("ニューバランス", "ニューバランス"), ("アシックス", "アシックス"), ("コンバース", "コンバース"),
+    ("プーマ", "プーマ"), ("ヴァンズ", "ヴァンズ"), ("リーボック", "リーボック"), ("サロモン", "サロモン"),
 ]
 
 # 「2026年9月28日(日)12:00」「9/28 12:00」「9月28日」などを読み取る
@@ -120,6 +147,57 @@ def normalize_gamepedia(entry, now):
     }
 
 
+def sneaker_brand(name):
+    for word, brand in SNEAKER_BRANDS:
+        if word in name:
+            return brand
+    return "その他"
+
+
+def fetch_sneakerwars(now):
+    """スニーカーウォーズのトップに載っている発売予定スニーカーから、抽選の行だけ集める。"""
+    top = BeautifulSoup(requests.get(SNEAKERWARS_TOP, headers=SNEAKERWARS_HEADERS, timeout=30).content, "html5lib")
+    names = {}
+    for desc in top.select("li .card-description"):
+        link = desc.find_parent("li").find("a", href=re.compile(r"/items/view/\d+"))
+        name = desc.get_text(strip=True)
+        if link and "リーク" not in name:
+            names.setdefault(re.search(r"/items/view/(\d+)", link["href"]).group(1), name)
+
+    items = []
+    for item_id, name in list(names.items())[:40]:
+        time.sleep(1)
+        page_url = f"https://sneakerwars.jp/items/view/{item_id}"
+        try:
+            page = BeautifulSoup(requests.get(page_url, headers=SNEAKERWARS_HEADERS, timeout=30).content, "html5lib")
+        except requests.RequestException as e:
+            print(f"スニーカーウォーズ {item_id} 取得エラー: {e}", file=sys.stderr)
+            continue
+        box = page.find(id="releasedata")
+        for row in box.select("li") if box else []:
+            shop, info = row.select_one(".font-releaseshop"), row.select_one(".font-online")
+            if not shop or not info or "抽選" not in info.get_text():
+                continue
+            info = info.get_text(" ", strip=True)  # 例: 9/19 9:00~10/8 8:59 WEB抽選
+            start_text, _, end_text = re.sub("[〜～]", "~", info).partition("~")
+            link = row.find("a", href=True)
+            items.append({
+                "product": name,
+                "shop": shop.get_text(strip=True),
+                "source": "スニーカーウォーズ",
+                "method": "店頭抽選" if "店頭" in info else "WEB抽選",
+                "start": parse_date(start_text, now, is_end=False),
+                "end": parse_date(end_text, now, is_end=True),
+                "announce": "",
+                "condition": info,
+                "url": ("https:" + link["href"]) if link and link["href"].startswith("//") else (link["href"] if link else page_url),
+                "upcoming_section": False,
+                "category": "スニーカー",
+                "game": sneaker_brand(name),
+            })
+    return items
+
+
 def dedupe_key(item):
     text = unicodedata.normalize("NFKC", f"{item['shop']}|{item['product']}")
     text = text.replace("ポケモンカード", "").replace("ゲーム", "")
@@ -144,14 +222,23 @@ def classify(item, now):
 
 def build_items(now):
     raw, errors = [], []
-    jobs = [(game, lambda url=url: fetch_nyuka_now_entries(url), normalize_nyuka) for game, url in NYUKA_TCG_PAGES]
-    jobs.append(("ポケカ", fetch_gamepedia_entries, normalize_gamepedia))
-    for game, fetch, normalize in jobs:
+    jobs = [
+        (game, lambda cat=cat, game=game, num=num: [
+            dict(normalize_nyuka(e, now), category=cat, game=game)
+            for e in fetch_nyuka_now_entries(f"https://nyuka-now.com/archives/{num}").values()
+        ])
+        for cat, game, num in NYUKA_PAGES
+    ]
+    jobs.append(("ポケカ", lambda: [
+        dict(normalize_gamepedia(e, now), category="トレカ", game="ポケカ") for e in fetch_gamepedia_entries().values()
+    ]))
+    jobs.append(("スニーカー", lambda: fetch_sneakerwars(now)))
+    for name, job in jobs:
         try:
-            raw += [dict(normalize(e, now), game=game) for e in fetch().values()]
+            raw += job()
         except Exception as e:  # 1つのページが落ちても他は表示する
-            errors.append(f"{game} の情報の一部が取れませんでした（{e.__class__.__name__}）")
-            print(f"{game}取得エラー: {e}", file=sys.stderr)
+            errors.append(f"{name} の情報の一部が取れませんでした（{e.__class__.__name__}）")
+            print(f"{name}取得エラー: {e}", file=sys.stderr)
         time.sleep(1)  # 相手のサイトに負担をかけないよう1秒あける
 
     # 重複をまとめる（情報が多い方を残す）
