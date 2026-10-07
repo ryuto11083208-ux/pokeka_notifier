@@ -47,36 +47,6 @@
         "詳細ページ_url": "https://livepocket.jp/e/cp5ds"
       }
     },
-    "抽選・予約応募受付中のストア::ヤマダデンキ::ポケモンカード メガシンフォニア ポケモンカード ストームエメラルダ ポケモンカード スタートデッキ100 バトルコレクション ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "ヤマダデンキ",
-      "data": {
-        "対象商品": "ポケモンカード メガシンフォニア ポケモンカード ストームエメラルダ ポケモンカード スタートデッキ100 バトルコレクション ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）",
-        "対象商品_url": "https://nyuka-now.com/archives/150413",
-        "抽選形式": "アプリ抽選受付（当選者には店頭販売）",
-        "開始日": "10月5日(月)23:00",
-        "終了日": "10月7日(水)23:59",
-        "当選発表": "10/21(水)12:00頃",
-        "応募条件": "「ヤマダデジタル会員」アプリからの申込限定 ※LABI・TLSおもちゃ取扱店舗限定 【申込手順】 アプリ内の「店頭セール」タブをタップ→スクロールして「抽選販売受付」バナーを探してタップ→受付フォームから抽選申込 10/24(土)再販予定分：メガシンフォニア・ストームエメラルダ（各1BOX）、スタートデッキ100 バトルコレクション、スターターセットex（ゾロア&ゾロアークex／ニャオハ&マスカーニャex） お一人様いずれか1種・1個限り",
-        "詳細ページ": "ヤマダデンキの詳細ページ",
-        "詳細ページ_url": "https://www.yamada-denki.jp/service/pointservice/digital-kaiin.html"
-      }
-    },
-    "抽選・予約応募受付中のストア::ドラゴンスター各店::ポケモンカード 30th CELEBRATION BOX": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "ドラゴンスター各店",
-      "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION BOX",
-        "対象商品_url": "https://nyuka-now.com/archives/159770",
-        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
-        "開始日": "10月5日(月)22:00",
-        "終了日": "10月7日(水)23:59",
-        "当選発表": "10月9日(金)予定",
-        "応募条件": "ドラゴンスターモバイル会員限定 ※「ドラゴンスター メンバーサービス」抽選申込みページより応募 拡張パック「30th CELEBRATION」1BOXまで（7,200円） 販売期間：10/10(土)〜10/12(月)・店頭販売のみ、身分証明証で本人確認",
-        "詳細ページ": "ドラゴンスター各店の詳細ページ",
-        "詳細ページ_url": "https://dorasuta.membercard.jp/lottery"
-      }
-    },
     "抽選・予約応募受付中のストア::トレカプラザ55通販::ポケモンカード 30th CELEBRATION カードセット各種": {
       "section": "抽選・予約応募受付中のストア",
       "store": "トレカプラザ55通販",
@@ -102,21 +72,6 @@
         "終了日": "10月11日(日)23:59",
         "当選発表": "10月12日(月)",
         "応募条件": "各店、店頭掲示のQRコードより応募（LivePocket、QR読み込みは10/11閉店まで） 9種セット、購入期間：10/16(金)〜10/23(金)、当選した店舗で購入（身分証明書・LivePocket当選チケットのQR画面が必要）"
-      }
-    },
-    "抽選・予約応募受付中のストア::晴れる屋2通販::ポケモンカード 30th CELEBRATION カードセット各種": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "晴れる屋2通販",
-      "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION カードセット各種",
-        "対象商品_url": "https://nyuka-now.com/archives/161846",
-        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
-        "開始日": "10月5日(月)18:00",
-        "終了日": "10月7日(水)18:00",
-        "当選発表": "10月9日(金)予定",
-        "応募条件": "応募には晴れる屋2 LINE会員登録およびLivePocketアカウントが必要 9種セット（税込10,800円＋送料）、お一人様1回まで 購入期間：10/9(金)〜10/13(火)15:00、店頭受取不可・発売日以降順次発送",
-        "応募ページ": "晴れる屋2通販の応募ページ",
-        "応募ページ_url": "https://livepocket.jp/e/ksy1d"
       }
     },
     "抽選・予約応募受付中のストア::トレカチャンピオン各店::ポケモンカード 30th CELEBRATION カードセット各種": {
@@ -175,36 +130,6 @@
         "詳細ページ_url": "https://contents.online.nojima.co.jp/secret202609/"
       }
     },
-    "抽選・予約応募受付中のストア::オレタン各店::ポケモンカード 30th CELEBRATION BOX ポケモンカード ストームエメラルダ": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "オレタン各店",
-      "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード ストームエメラルダ",
-        "対象商品_url": "https://nyuka-now.com/archives/159770",
-        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
-        "開始日": "10月3日(土)21:00",
-        "終了日": "10月7日(水)23:59",
-        "当選発表": "10月8日(木) 予定",
-        "応募条件": "応募にはオレタンモバイル会員「オレモバ」への会員登録が必要 お一人様1BOXのみ応募可能（30th CELEBRATION 7,200円／ストームエメラルダ 6,000円） シュリンクとミシン目を外した状態でのお渡し 当選者購入期間：10/10(土)〜10/12(月祝) 対象店舗：岡山本店・福岡天神店・松山店",
-        "詳細ページ": "岡山本店 福岡天神店 松山店ほか",
-        "詳細ページ_url": "https://oretan.membercard.jp/lottery?search_store_id=118"
-      }
-    },
-    "抽選・予約応募受付中のストア::イエローサブマリン各店::ポケモンカード 30th CELEBRATION カードセット各種": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "イエローサブマリン各店",
-      "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION カードセット各種",
-        "対象商品_url": "https://nyuka-now.com/archives/161846",
-        "抽選形式": "店頭抽選受付（当選者には店頭販売）",
-        "開始日": "10月4日(日)10:00",
-        "終了日": "10月7日(水)20:00",
-        "当選発表": "10月15日(木)予定",
-        "応募条件": "各店掲示のポスター（QRコード）より申込みページへ・LivePocketアカウントが必要 10/4〜10/7発行の300円以上の購入レシートが必要（予約レシート不可） 9種セットでの抽選、当選者購入期間：10/16(金)〜10/18(日)閉店時・マイナンバーカードで本人確認",
-        "詳細ページ": "イエローサブマリン各店の詳細ページ",
-        "詳細ページ_url": "https://x.com/YS_INFO/"
-      }
-    },
     "抽選・予約応募受付中のストア::ジョーシン（アプリ）::ポケモンカード 30th CELEBRATION カードセット各種": {
       "section": "抽選・予約応募受付中のストア",
       "store": "ジョーシン（アプリ）",
@@ -247,21 +172,6 @@
         "応募条件": "・コジマアプリの応募画面より応募（9種セット税込10,800円、おひとり様1セットまで） ・コジマアプリポイントカードで2025年10月1日～2026年10月9日にコジマ(コジマネット含む)で累計税込5,000円以上の購入履歴が必要 ・購入期限：10/16(金)〜10/18(日)、応募時に登録した受け取り店舗で購入 ※ビックカメラ・ソフマップ各店舗、一部コジマ店舗は対象外 ※詳細はコジマ（アプリ）にてご確認ください",
         "詳細ページ": "コジマ（アプリ）の詳細ページ",
         "詳細ページ_url": "https://www.kojima.net/shop/app/kojima_appli.html"
-      }
-    },
-    "抽選・予約応募受付中のストア::キデイランド各店::ポケモンカード 30th CELEBRATION カードセット各種": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "キデイランド各店",
-      "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION カードセット各種",
-        "対象商品_url": "https://nyuka-now.com/archives/161846",
-        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
-        "開始日": "10月5日(月)10:00",
-        "終了日": "10月7日(水)23:59",
-        "当選発表": "10月14日 18:00頃までに連絡",
-        "応募条件": "9種セットでの抽選販売 店舗ごとにLivePocketの応募ページあり（吉祥寺店・清水店・福岡パルコ店・光が丘店・ららぽーと富士見店・ららぽーとEXPOCITY店など） 販売期間：10/16(金)〜10/18(日)",
-        "詳細ページ": "キデイランド各店の詳細ページ",
-        "詳細ページ_url": "https://livepocket.jp/p/hpmzs"
       }
     },
     "抽選・予約応募受付中のストア::ポケモンセンタートウキョーベイ::ポケモンカード MEGAドリームex": {
@@ -331,7 +241,58 @@
       }
     }
   },
-  "pokecawatch": {},
+  "pokecawatch": {
+    "https://pokecawatch.com/?p=18797": {
+      "title": "【ポケカ】30th CELEBRATION　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration",
+      "published": "Thu, 02 Jul 2026 08:33:00 +0000"
+    },
+    "https://pokecawatch.com/?p=18845": {
+      "title": "【ポケカ】30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-premium?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-premium",
+      "published": "Wed, 01 Jul 2026 19:38:00 +0000"
+    },
+    "https://pokecawatch.com/?p=18885": {
+      "title": "【ポケカ】ポケモンカードゲーム MEGA 30th CELEBRATION FUTURISTIC BOX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-30th-celebration-futuristicbox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-30th-celebration-futuristicbox",
+      "published": "Wed, 01 Jul 2026 06:42:01 +0000"
+    },
+    "https://pokecawatch.com/?p=18903": {
+      "title": "【ポケカ】ストームエメラルダ　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-storm-emerald?utm_source=rss&utm_medium=rss&utm_campaign=lottery-storm-emerald",
+      "published": "Fri, 19 Jun 2026 07:52:53 +0000"
+    },
+    "https://pokecawatch.com/?p=17828": {
+      "title": "【ポケカ】アビスアイ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-abyss-eye?utm_source=rss&utm_medium=rss&utm_campaign=lottery-abyss-eye",
+      "published": "Mon, 20 Apr 2026 02:44:29 +0000"
+    },
+    "https://pokecawatch.com/?p=17724": {
+      "title": "【ポケカ】ニンジャスピナー 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-ninja-spinner?utm_source=rss&utm_medium=rss&utm_campaign=lottery-ninja-spinner",
+      "published": "Mon, 16 Feb 2026 11:26:09 +0000"
+    },
+    "https://pokecawatch.com/?p=17501": {
+      "title": "【ポケカ】ムニキスゼロ 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-munikisu-zero?utm_source=rss&utm_medium=rss&utm_campaign=lottery-munikisu-zero",
+      "published": "Fri, 19 Dec 2025 12:20:58 +0000"
+    },
+    "https://pokecawatch.com/?p=16645": {
+      "title": "【ポケカ】MEGAドリームex 抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-mega-dream-ex?utm_source=rss&utm_medium=rss&utm_campaign=lottery-mega-dream-ex",
+      "published": "Sat, 08 Nov 2025 10:56:26 +0000"
+    },
+    "https://pokecawatch.com/?p=16515": {
+      "title": "【ポケカ】インフェルノX　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-infernox?utm_source=rss&utm_medium=rss&utm_campaign=lottery-infernox",
+      "published": "Sun, 31 Aug 2025 16:05:41 +0000"
+    },
+    "https://pokecawatch.com/?p=16258": {
+      "title": "【ポケカ】メガブレイブ・メガシンフォニア　抽選・予約情報",
+      "link": "https://pokecawatch.com/lottery-megabrave-mega-symphonia?utm_source=rss&utm_medium=rss&utm_campaign=lottery-megabrave-mega-symphonia",
+      "published": "Tue, 01 Jul 2025 08:20:01 +0000"
+    }
+  },
   "gamepedia": {
     "アビスアイ::product_schedule-637": {
       "product": "アビスアイ",
@@ -395,20 +356,6 @@
       },
       "detail_url": "https://www.amazon.co.jp/dp/B0FLD7HMRP?aod=1&m=AN1VRQENFRJN5&tag=gamepedia-pokeca-22"
     },
-    "スタートデッキ100 バトルコレクション::product_schedule-1057": {
-      "product": "スタートデッキ100 バトルコレクション",
-      "shop": "ヤマダデジタル会員アプリ(10月再販分)",
-      "data": {
-        "対象商品": "スタートデッキ100 バトルコレクション",
-        "販売種別": "抽選",
-        "抽選開始日時": "10/5(月) 23:00",
-        "抽選終了日時": "10/7(水) 23:59",
-        "抽選結果発表": "10/21(水)12:00頃【アプリ内マイぺージ】",
-        "購入期間": "10/24(土)~10/30(金)",
-        "購入制限等": "・1人1点まで ・ヤマダデジタル会員アプリのメニュー「店頭セール」の中にある抽選販売受付のバナーから応募可能 ・2025年4月1日~2026年10月4日の期間中にヤマダ電機店舗にて購入履歴がある方、またはゴールド会員に入会している方が対象"
-      },
-      "detail_url": "https://www.yamada-denki.jp/service/pointservice/digital-kaiin.html"
-    },
     "スタートデッキ100 バトルコレクション::product_schedule-1014": {
       "product": "スタートデッキ100 バトルコレクション",
       "shop": "トレカプラザ55通販店(9月再販分)",
@@ -425,41 +372,28 @@
     }
   },
   "reminders_sent": {
-    "nyuka_now::抽選・予約応募受付中のストア::ヤマダデンキ::ポケモンカード メガシンフォニア ポケモンカード ストームエメラルダ ポケモンカード スタートデッキ100 バトルコレクション ポケモンカード スターターセットex各種（イーブイex、ゾロア＆ゾロアークex、ニャオハ＆マスカーニャex）": [
-      "明日締切",
-      "本日締切"
-    ],
-    "nyuka_now::抽選・予約応募受付中のストア::ドラゴンスター各店::ポケモンカード 30th CELEBRATION BOX": [
-      "明日締切",
-      "本日締切"
-    ],
-    "nyuka_now::抽選・予約応募受付中のストア::晴れる屋2通販::ポケモンカード 30th CELEBRATION カードセット各種": [
-      "明日締切",
-      "本日締切"
-    ],
-    "nyuka_now::抽選・予約応募受付中のストア::オレタン各店::ポケモンカード 30th CELEBRATION BOX ポケモンカード ストームエメラルダ": [
-      "明日締切",
-      "本日締切"
-    ],
-    "nyuka_now::抽選・予約応募受付中のストア::イエローサブマリン各店::ポケモンカード 30th CELEBRATION カードセット各種": [
-      "明日締切",
-      "本日締切"
-    ],
-    "nyuka_now::抽選・予約応募受付中のストア::キデイランド各店::ポケモンカード 30th CELEBRATION カードセット各種": [
-      "明日締切",
-      "本日締切"
-    ],
-    "gamepedia::スタートデッキ100 バトルコレクション::product_schedule-1057": [
-      "明日締切",
-      "本日締切"
-    ],
     "nyuka_now::抽選・予約応募受付中のストア::ホビーステーション::ポケモンカード ストームエメラルダ": [
-      "明日締切"
+      "明日締切",
+      "本日締切"
     ],
     "nyuka_now::抽選・予約応募受付中のストア::TCGショップ193各店::ポケモンカード 30th CELEBRATION カードセット各種": [
-      "明日締切"
+      "明日締切",
+      "本日締切"
     ],
     "nyuka_now::抽選・予約応募受付中のストア::イオンスタイルオンライン::ポケモンカード ストームエメラルダ": [
+      "明日締切",
+      "本日締切"
+    ],
+    "nyuka_now::抽選・予約応募受付中のストア::ヤマシロヤ（上野）::ポケモンカード 30th CELEBRATION カードセット各種": [
+      "明日締切"
+    ],
+    "nyuka_now::抽選・予約応募受付中のストア::トレカプラザ55通販::ポケモンカード 30th CELEBRATION カードセット各種": [
+      "明日締切"
+    ],
+    "nyuka_now::抽選・予約応募受付中のストア::竜のしっぽ各店::ポケモンカード 30th CELEBRATION カードセット各種": [
+      "明日締切"
+    ],
+    "nyuka_now::抽選・予約応募受付中のストア::コジマ（アプリ）::ポケモンカード 30th CELEBRATION カードセット各種": [
       "明日締切"
     ]
   }
