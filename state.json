@@ -1,5 +1,19 @@
 {
   "nyuka_now": {
+    "抽選・予約応募受付中のストア::ヤマシロヤ オンラインショップ::ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー": {
+      "section": "抽選・予約応募受付中のストア",
+      "store": "ヤマシロヤ オンラインショップ",
+      "data": {
+        "対象商品": "ポケモンカード 30th CELEBRATION BOX ポケモンカード 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+        "対象商品_url": "https://nyuka-now.com/archives/159770",
+        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
+        "開始日": "10月10日(土)21:30",
+        "終了日": "10月12日(月)21:30",
+        "当選発表": "10月16日(金)",
+        "応募ページ": "ヤマシロヤ オンラインショップの応募ページ",
+        "応募ページ_url": "https://docs.google.com/forms/d/e/1FAIpQLScZfQ9HdwSJRHhSsOeLB6s7Kd_qXvG-NIRMupIERWPPcCsnsg/viewform"
+      }
+    },
     "抽選・予約応募受付中のストア::フルコンプ 一部店舗::ポケモンカード 30th CELEBRATION カードセット各種": {
       "section": "抽選・予約応募受付中のストア",
       "store": "フルコンプ 一部店舗",
@@ -86,22 +100,6 @@
         "応募条件": "メガブレイブ・メガシンフォニア 各1BOX 5,400円（税込）、おひとり様各1〜2BOXまで 受取日：10/26(月)〜10/30(金) 10:00〜22:30（POKÉMON CARD LOUNGE / SHIBUYA TSUTAYA 5F） 受取時に顔写真付き本人確認書類が必要",
         "詳細ページ": "ポケモンカードラウンジ渋谷店の詳細ページ",
         "詳細ページ_url": "https://cloud-pass.jp/pr/0c5631cdf5e7fe4cb93de915cbb110c59536fc7881b99ed0e2f5225d190817b5"
-      }
-    },
-    "抽選・予約応募受付中のストア::Bee本舗::ポケモンカード 30th CELEBRATION カードセット各種": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "Bee本舗",
-      "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION カードセット各種",
-        "対象商品_url": "https://nyuka-now.com/archives/161846",
-        "抽選形式": "WEB抽選受付（当選者にはオンライン販売）",
-        "開始日": "10月8日(木)0:00",
-        "終了日": "10月10日(土)20:00",
-        "当選発表": "10月16日(金)",
-        "応募条件": "Bee本舗通販サイト( https://www.bee-honpo.com/) に会員登録しているお客様が対象となります。 9種類セット（税込10,800円＋送料）、おひとり様1回限り 当選者購入期間：10/16(金)〜10/18(日)23:59、発売日以降順次発送",
-        "応募条件_url": "https://www.bee-honpo.com/)",
-        "応募ページ": "Bee本舗の応募ページ",
-        "応募ページ_url": "https://docs.google.com/forms/d/e/1FAIpQLScTG5OQWrK2kz-l-dvDnN0uSkM1TWSck69blrZLRMcemWAoOg/viewform"
       }
     },
     "抽選・予約応募受付中のストア::お宝創庫・プレイズ::ポケモンカード 30th CELEBRATION カードセット各種": {
@@ -417,10 +415,6 @@
     }
   },
   "reminders_sent": {
-    "nyuka_now::抽選・予約応募受付中のストア::Bee本舗::ポケモンカード 30th CELEBRATION カードセット各種": [
-      "明日締切",
-      "本日締切"
-    ],
     "nyuka_now::抽選・予約応募受付中のストア::フルコンプ 一部店舗::ポケモンカード 30th CELEBRATION BOX ポケモンカード ストームエメラルダ": [
       "本日締切"
     ],
