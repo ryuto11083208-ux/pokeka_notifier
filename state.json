@@ -15,21 +15,6 @@
         "応募ページ_url": "https://www.shop-shimamura.com/disp/itemlist/?pre_rsv_icon=1"
       }
     },
-    "抽選・予約応募受付中のストア::ホビーステーション（関東の店舗）::ポケモンカード 30th CELEBRATION BOX": {
-      "section": "抽選・予約応募受付中のストア",
-      "store": "ホビーステーション（関東の店舗）",
-      "data": {
-        "対象商品": "ポケモンカード 30th CELEBRATION BOX",
-        "対象商品_url": "https://nyuka-now.com/archives/159770",
-        "抽選形式": "WEB抽選受付（当選者には店頭販売）",
-        "開始日": "10月20日(火)12:00",
-        "終了日": "10月22日(木)23:59",
-        "当選発表": "2026年10月30日(金)〜31日(土)予定",
-        "応募条件": "関東の対象店舗から1店舗のみ応募可（複数店舗応募は無効）、申し込みには「Livepocket会員登録」が必要 30th CELEBRATION（再販）各7,200円（税込）、当選者は2BOXまで購入可、購入期間：11/2(月)〜11/8(日) 購入時に公的な本人確認書類が必要",
-        "詳細ページ": "ホビーステーション（関東の店舗）の詳細ページ",
-        "詳細ページ_url": "https://livepocket.jp/e/4_jau"
-      }
-    },
     "抽選・予約応募受付中のストア::イオン九州::ポケモンカードゲーム MEGA スペシャルデッキセットMEGA メガオーダイル・メガカイリュー・メガゲンガー": {
       "section": "抽選・予約応募受付中のストア",
       "store": "イオン九州",
@@ -250,10 +235,5 @@
       "detail_url": "https://docs.google.com/forms/d/e/1FAIpQLSdMX-h7obyLG4eRExlnA1HCvcy3sZuT29hmXyLE2oTMm1OrpQ/viewform"
     }
   },
-  "reminders_sent": {
-    "nyuka_now::抽選・予約応募受付中のストア::ホビーステーション（関東の店舗）::ポケモンカード 30th CELEBRATION BOX": [
-      "明日締切",
-      "本日締切"
-    ]
-  }
+  "reminders_sent": {}
 }
